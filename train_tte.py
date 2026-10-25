@@ -25,12 +25,6 @@ LOCKED_TRAIN_MEAN_SECONDS = 485.50155132816224
 LOCKED_TRAIN_STD_SECONDS = 350.44401804624164
 
 def set_global_seed(seed):
-    """
-    Seed Python, NumPy and PyTorch.
-
-    This controls the experimental RNG state
-    across the four TTE semantic conditions.
-    """
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -38,18 +32,9 @@ def set_global_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def tte_validation_improved(current_mae, best_mae):
-    """
-    Lower validation MAE is better.
-
-    Equal MAE does not replace the existing
-    best checkpoint.
-    """
     return current_mae < best_mae
 
 def build_tte_cache_path(split):
-    """
-    Resolve one canonical TTE cache.
-    """
     if split not in {'train', 'validation', 'test'}:
         raise ValueError(f'Unsupported TTE split: {split}')
     sample_rate_tag = global_vars.format_cache_value(args.sample_rate)
@@ -66,10 +51,6 @@ def validate_tte_cache_metadata(dataset, *, split, model_metadata):
             raise RuntimeError(f'{split} TTE cache metadata mismatch for {key}: expected {expected_value!r}, found {actual_value!r}.')
 
 def compute_train_target_statistics(train_dataset):
-    """
-    Compute z-normalization parameters from
-    the training target only.
-    """
     y = train_dataset.duration_seconds.to(torch.float64)
     if y.numel() == 0:
         raise RuntimeError('Training TTE cache is empty.')
@@ -96,11 +77,6 @@ def denormalize_prediction(prediction_normalized, *, mean_seconds, std_seconds):
     return prediction_normalized * std_seconds + mean_seconds
 
 def create_dataloader(dataset, *, shuffle, device, generator=None):
-    """
-    Match the controlled next-hop loader:
-    single process, optional deterministic
-    shuffle generator.
-    """
     return DataLoader(dataset, batch_size=args.batch_size, shuffle=shuffle, num_workers=0, pin_memory=device.type == 'cuda', generator=generator)
 
 def move_batch_to_device(batch, device):
@@ -109,9 +85,6 @@ def move_batch_to_device(batch, device):
     return (road_ids.to(device, non_blocking=non_blocking), time_ids.to(device, non_blocking=non_blocking), time_features.to(device, non_blocking=non_blocking), valid_mask.to(device, non_blocking=non_blocking), lengths.to(device, non_blocking=non_blocking), duration_seconds.to(device, non_blocking=non_blocking))
 
 def train_one_epoch(model, dataloader, optimizer, scheduler, device, epoch, *, mean_seconds, std_seconds):
-    """
-    Run one complete TTE training epoch.
-    """
     model.train()
     total_loss = 0.0
     total_samples = 0
@@ -140,10 +113,6 @@ def train_one_epoch(model, dataloader, optimizer, scheduler, device, epoch, *, m
 
 @torch.no_grad()
 def evaluate(model, dataloader, device, split_name, *, mean_seconds, std_seconds):
-    """
-    Evaluate normalized SmoothL1 plus
-    MAE/RMSE/MAPE in physical seconds.
-    """
     model.eval()
     metric_accumulator = TTEMetricAccumulator()
     total_loss = 0.0
@@ -200,10 +169,6 @@ def sha256_file(path):
     return digest.hexdigest().upper()
 
 def run_experiment(device, pretrained_checkpoint):
-    """
-    Controlled BIGCity trip-level TTE
-    train/validation/test experiment.
-    """
     set_global_seed(args.seed)
     metadata_path, model_metadata = load_model_support_data()
     train_cache_path = build_tte_cache_path('train')
