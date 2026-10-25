@@ -1,0 +1,453 @@
+{
+  "schema_version": 2,
+  "publication_status": "LOCAL_ONLY_LICENSING_UNRESOLVED",
+  "upstream": {
+    "url": "https://github.com/bigscity/BIGCity.git",
+    "commit": "5f7168bf7a43c3a40e19e4a80cdb6d77b080edec",
+    "tree": "e6d2eb9e0b969a45589e4ebb26a1ae0e1b598275"
+  },
+  "files": [
+    {
+      "path": "config/__init__.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "1850584F055D89C8850FCEAE2FC3FB8E8990ADCA365C08072B2F5E03FE374C88",
+      "base_sha256": "02BA33CA2A114F2E430911E94C79D9624326BC5EA1A1D13E4FB4AF5557DEA932"
+    },
+    {
+      "path": "config/args_config.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "ED3415B75BCEAD5792AC6BB604ACEC1106820660F2D0EDE70447904637C190B7",
+      "base_sha256": "DB1EF937519F28188485D8773D0BD8B459E9FFA2BDA40D6BD5998917DD249DE2"
+    },
+    {
+      "path": "config/global_vars.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "4696C96CC9F996034610836C5356D8D211A47EDFCE74BC1D0E37ADFF3EF937BA",
+      "base_sha256": "B1AA49E6234CE8FC52930BA08D2118EB43D40FBFF200139A980704DEDAB1BB92"
+    },
+    {
+      "path": "config/logging_config.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "89DD7C74679F7EEBE9861B0D47E4F5920CDD79CBC07F2C44F9C5EEAA0524E59E"
+    },
+    {
+      "path": "config/random_seed.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "61D4E755937F0E2D55BC8D3F0541BE1310BE9CB81171DAAEB033BE7BFEFD1884"
+    },
+    {
+      "path": "data_provider/__init__.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "data_provider/cached_next_hop_dataset.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "6F513AC15FD3A91222B1AFC68996570AB2C5F652D1D1577EFEF1F8F5F82C6E83"
+    },
+    {
+      "path": "data_provider/data_loader.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "480BEFDEDD07084BC75C3616E35BA4730314915C48A4FB5CAB6835ADA393661E",
+      "base_sha256": "190D7FE3F0A145E9C2A79B76A21381D588FADA5E4C5A461F411252F61356E9E4"
+    },
+    {
+      "path": "data_provider/dynamic_preprocessing.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "8F539DA8EE07766772AF7E582B8888400F7844CD143DC3065AEBD03D903FBFF0"
+    },
+    {
+      "path": "data_provider/file_loader.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "9CEE31CACC5BA1A7710D39DE2FA7B0858220C61ED1646BA089A884BA0BDF430F",
+      "base_sha256": "638D6DDA4E37851C712589D72DE3F2003E2393A2903B1E670D9D69DFD7D0BC29"
+    },
+    {
+      "path": "data_provider/tte_dataset.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "B91CCA4E07A6C1744925DD47DA053595E200056C0A7D89632A8FA57E01062E4C"
+    },
+    {
+      "path": "environments/analysis.txt",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "E36D2D556AA95CD336DDCC02A61E806A9A36437D75138E6C5A7FAF741B567E8E"
+    },
+    {
+      "path": "environments/bigcity.txt",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "24CD257426D2079C40C4875853D14D53BC15EE8EA0D54A193747591F213C3C7C"
+    },
+    {
+      "path": "environments/provenance.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "09CE76B5AE458D945170E3EF2C2D2638A7E6E66F451ACA742BD3DBC4B2E105F7"
+    },
+    {
+      "path": "environments/qwen.txt",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "B8E2470ADCD2AA9BBDF5C60C1F0A0A31340D16573A64C43F1365CBEBC2AD5E55"
+    },
+    {
+      "path": "experiments/nh_baseline.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "56262DE2867FA886A488A805060E592F7E4844DC18C94AA0DB0DC69D5569D117"
+    },
+    {
+      "path": "experiments/nh_poi_tfidf.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "EF82A56041F36C2B4BB8E9E1582707E7491675C6BE53F70875F06B1DF48E8C05"
+    },
+    {
+      "path": "experiments/nh_qwen_poi.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "9090A3313D47DD46A996809B6BC3B9023059BDE280CA3790B206ED5CDADFF9F1"
+    },
+    {
+      "path": "experiments/tte_baseline.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "649A6685D829D6ED6BCB372E97528704993DCD40B5A50D00BFE916225C2CDC91"
+    },
+    {
+      "path": "experiments/tte_qwen.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "817518D88B66151B1A3F51BE35E6AA3B843BC2CAFC6AC9EE1BABA60FCD08797F"
+    },
+    {
+      "path": "experiments/tte_structured.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "5DE4D253D69C07955354551B906509CA79F01CB6E9E3182CD28A32F38390D48A"
+    },
+    {
+      "path": "models/__init__.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "models/backbone.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "104A1DC9BECDB909D82A3F8C1206AAAC335743F6174E781ED9AE70BD97906D97",
+      "base_sha256": "E552715E28CE5DF87B32570D5156DA63D416EAEFEE1B151BBAF75B37AE12662E"
+    },
+    {
+      "path": "models/bigcity.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "8AC8A106F2221686B488A15E75E4C876EB105F14BCE5AB5AFF3DCD4F78225171"
+    },
+    {
+      "path": "models/bigcity4finetune.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "B923FBFD1457B40AF62DAE49FAD93D76E09D032BC74DD436FC515F850276DCC0",
+      "base_sha256": "6E8157327C673C0E365AD409C949C8B7C09D15C9FF88E1A4A12A5FDCFA25C800"
+    },
+    {
+      "path": "models/bigcity4tte.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "470DBF6787296811288BD85F4EC5A8B25F45C92E9C952BCAC0B4B5B08ECCADDC"
+    },
+    {
+      "path": "models/layers.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "F132A5F6C45331227595267FDE2319B4F5C0E7A2D9A9F98C1346BC96E35D47F5"
+    },
+    {
+      "path": "models/st_tokenizer.py",
+      "category": "ADAPTATION",
+      "source": "explicit_bundle",
+      "sha256": "25D0DF88ABE12CDAAFAB1E55800331C1399830CCC5A3D5730AEF3AB1C677CD13",
+      "base_sha256": "42DAC2203298F9007A333696439B4C222D90B52C520F3ADA203D304831CF1553"
+    },
+    {
+      "path": "reproducibility/external_artifacts.json",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "6E7ADDB96DE493FF5BE9378C5E50E1ED238EF051FD0B378C84F14676B7C825BD"
+    },
+    {
+      "path": "reproducibility/phase2_configurations.md",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "7C7C39F84D2B5D5F8A46D7FD0B82CC784C90C0962221CABD31ADD439FB52A53E"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "scripts/analyze_final_next_hop_statistics.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "27F09EF3362FCBFA5C46BE25151FC0CAB3B2778A5B74961B417A2646E8C4F8D9"
+    },
+    {
+      "path": "scripts/analyze_final_next_hop_stratified.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "614A35C0EBF93F13B67613C8058423AF33E96920851D2E68839FCF2334490EC7"
+    },
+    {
+      "path": "scripts/analyze_final_tte_statistics.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "67A06D852DC07CECAFA2A9BB5858B97AA1124CD5F12695205E75959881E95026"
+    },
+    {
+      "path": "scripts/analyze_final_tte_stratified.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "A8EC8676F53BB733286DFE63E7D42E7DEA22BF87D5CB0D3E2459D2350DC68ED4"
+    },
+    {
+      "path": "scripts/build_dynamic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "7B7DE526762A62EB2879B53733C5E2F1BC4A07CF265D7BE4FD722B01C536BD81"
+    },
+    {
+      "path": "scripts/build_full_metadata.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "53567F3CE68686612971B2D327ECDF65F3B048DED4F0625EBB7000AB984B3E8C"
+    },
+    {
+      "path": "scripts/build_language_road_semantic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "8A1E8DB487513EF676EEBF173E0ACC27A1AD4AFD2C789F6D4B41BF33E8C21A4E"
+    },
+    {
+      "path": "scripts/build_language_semantic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "2388E6E5CE8086BEE73783AB60472D2800EE21ECC53E38A90B9479432AEAF33C"
+    },
+    {
+      "path": "scripts/build_next_hop_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "1B90CBE6BA5F2B7969B31499180F6E936C7587FE10C03FCB1A0CD3DFD4F2FB8F"
+    },
+    {
+      "path": "scripts/build_semantic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "5A0B7510F96D3A63AD5880CA26F489D9E99C4F101A38C70ABE7F8F64AD438854"
+    },
+    {
+      "path": "scripts/build_structural_caches.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "D18FC9BF13DF336D5402DBF4E888ABF912AF453CB303C26D95A38EC1278D376F"
+    },
+    {
+      "path": "scripts/build_tte_qwen_semantic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "37DDE4C3A6DF961B0FE0536489267AAF88B658B960D3E5255682A2F48F88CAC3"
+    },
+    {
+      "path": "scripts/build_tte_structured_semantic_cache.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "5BC1631C1FAB641C26931BA693869DDAFB96DF1893F692BB0DB2B1115BFA59AD"
+    },
+    {
+      "path": "scripts/export_final_next_hop_per_sample.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "05650BB97A73082D288B2ACF12F8C60892E8475D781EB94B3480F2171F860DEF"
+    },
+    {
+      "path": "scripts/export_final_tte_per_sample.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "4B891829002EB87B47ECBE9386D69622D30FF49AA77714701A64D7323CB35B1D"
+    },
+    {
+      "path": "scripts/plot_final_next_hop_figures_5_1_5_2.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "6BCFE5C4CFC57994D96D2951D6E0474236AF80D0E10FA13DA3F248235AC32E3C"
+    },
+    {
+      "path": "scripts/plot_final_next_hop_figures_5_3_5_4.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "DABA07C8CA2690D163DF274CA2EF32D3F7057C8425EE940F85D5D6AC6E94688C"
+    },
+    {
+      "path": "scripts/plot_final_tte_figures.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "CBFB0D206F680DF55700E02BD3B0B0F4844B15103CF63793DC5BF2534FB3897C"
+    },
+    {
+      "path": "scripts/portable_runtime_support.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "F9362EFB07E7E63BDA545CDDFFE0E60393AC75E65A531BA91FE6AB3A25C199BE"
+    },
+    {
+      "path": "scripts/validate_experiment_configs.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "21ACD21F2F87B7B4967C367847D55814027316AF75565D30F46A58EAC2E3200C"
+    },
+    {
+      "path": "scripts/verify_tte_dataset.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "6C908B54F5E900DADE9D9F94F3E1FCA2DD4C1BAD04EE40EFB9D7063C9F53A71E"
+    },
+    {
+      "path": "tests/test_build_dynamic_cache.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "B07C41AFEA91445BAA683D705B741731E0301020BC4468FE13BB8CA2B61BA82A"
+    },
+    {
+      "path": "tests/test_build_full_metadata.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "96183E41B36A2FF3E54C638803A6141A2865FC5217FABE3720B6EC92D9C0B36D"
+    },
+    {
+      "path": "tests/test_build_next_hop_cache.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "8118A24BAA034DE257FEA9E4BBED351122CED5D85D09D93C2281BCFEDED07483"
+    },
+    {
+      "path": "tests/test_build_structural_caches.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "96B63848C00A7A26D9EE771D4A4365508836BD4D63FF269BD645990AD22AD645"
+    },
+    {
+      "path": "tests/test_build_tte_structured_semantic_cache.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "D66C3119D7496D288A27875331962691C3CC663048640E9C9A0841C25EC60F0B"
+    },
+    {
+      "path": "tests/test_cached_next_hop_dataset.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "00A4000F311F491DD2C1061BF8C024D7C008E33FB7C5E86FB7982D044C022151"
+    },
+    {
+      "path": "tests/test_canonical_runtime_regressions.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "8823CAE6A1927C9E84012CC382CE5F759C22765E0CC91A529F5416DB411EC05B"
+    },
+    {
+      "path": "tests/test_dynamic_preprocessing.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "3F116BC7669EFA7B4E3409B432EF59CD3B02D069ECF69CEF9CD5BE3CD719CC4F"
+    },
+    {
+      "path": "tests/test_experiment_configs.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "3CE08663CB8226EC0182A5AE5A8AA4246C946B089E0BE5A7D888E44D9C57CADD"
+    },
+    {
+      "path": "tests/test_file_loader_dynamic_modes.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "C7C60D4ADD68FD337CB26A04BADB07D1567C9DEC9C9D5AC5D1A0EA992976EFBF"
+    },
+    {
+      "path": "tests/test_next_hop_metrics.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "E6E568DFD6D69AA9A736E2BACAF21A9504917BABF36024A63BBF71DBC044DDC9"
+    },
+    {
+      "path": "tests/test_portable_runtime_interfaces.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "C4507DD40C8155717913E77E0BA9C5F3439C4E37BB2A761B6B2D2826CA6D6036"
+    },
+    {
+      "path": "tests/test_portable_runtime_support.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "E3DFB95120DEF1A4EAB33D696E09F98EED35E18E4F328CA3A850BF5C2F41202B"
+    },
+    {
+      "path": "tests/test_train_next_hop.py",
+      "category": "VERIFICATION",
+      "source": "explicit_bundle",
+      "sha256": "56E233E58BA4E02EF03F03A7648639F3893AC494D46C7EF9DDCA4DC9AE1527F4"
+    },
+    {
+      "path": "train_next_hop.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "D6416B04135FA04CD9C4C769161C5C13E04D548868B73C2B9C31DA2AE8E7B702"
+    },
+    {
+      "path": "train_tte.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "FA7FF4A5227044C8A5DDB8B1C311FB9945EDF386BEA0A7002291FB361CB7AB0F"
+    },
+    {
+      "path": "utils/__init__.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "utils/next_hop_metrics.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "7C4D118CB4774153C5E6890B45C7F4DDF47556715E49A6D0627C41FCB2E2F84A"
+    },
+    {
+      "path": "utils/timefeatures.py",
+      "category": "UPSTREAM",
+      "source": "official_upstream",
+      "sha256": "987CAD01B1F76CDDAA468212A3CB56A540581E024F97C8F796ED8DE2836FC53A"
+    },
+    {
+      "path": "utils/tte_metrics.py",
+      "category": "ORIGINAL",
+      "source": "explicit_bundle",
+      "sha256": "8DA5C5EE7E44C202C31B25A7F3C38D100EAE324F77E85E7D9635021FAB061E1A"
+    }
+  ],
+  "source_bundle_policy": "Explicit external filesystem bundle; no thesis Git object provider or fallback. Redistribution blocked pending rights.",
+  "scientific_baseline": "PHASE3 source identity preserved except reviewed portable paths, execution boundaries, output safety and reproduction profiles."
+}

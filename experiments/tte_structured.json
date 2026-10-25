@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "id": "tte_structured",
+  "name": "TTE Structured",
+  "task": "tte",
+  "semantic_mode": "tte_structured",
+  "environment": "bigcity",
+  "runner": "train_tte.py",
+  "working_directory": "{BIGCITY_ROOT}",
+  "cli": {
+    "--task_name": "tte",
+    "--dataset_path": "{DATASET_ROOT}",
+    "--city": "xa",
+    "--split": "train",
+    "--seq_len": 64,
+    "--sample_rate": 1,
+    "--seed": 2021,
+    "--dynamic_mode": "controlled",
+    "--static_ablation": "none",
+    "--semantic_mode": "tte_structured",
+    "--pretrained_checkpoint": "{PRETRAINED_CHECKPOINT}",
+    "--checkpoint_path": "{RUN_ROOT}/tte_structured/checkpoint",
+    "--batch_size": 32,
+    "--learning_rate": 0.0002,
+    "--weight": 0,
+    "--train_epochs": 20,
+    "--patience": 3,
+    "--use_gpu": true,
+    "--device": "0",
+    "--wandb_mode": "offline"
+  },
+  "provenance": {
+    "cli": {
+      "--task_name": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.task"
+        ]
+      },
+      "--dataset_path": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "Explicit replacement for historical default ../dataset/"
+      },
+      "--city": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.city"
+        ]
+      },
+      "--split": {
+        "status": "INFERRED",
+        "evidence": [
+          "config/args_config.py:get_args_parser",
+          "train_tte.py:main / run_training"
+        ],
+        "note": "Explicit loader context; runner builds and checks all three official splits"
+      },
+      "--seq_len": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.seq_len"
+        ]
+      },
+      "--sample_rate": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.sample_rate"
+        ]
+      },
+      "--seed": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.seed"
+        ]
+      },
+      "--dynamic_mode": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.dynamic_mode"
+        ]
+      },
+      "--static_ablation": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.static_ablation"
+        ]
+      },
+      "--semantic_mode": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.semantic_mode"
+        ]
+      },
+      "--pretrained_checkpoint": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "Artifact identity is independently CONFIRMED in external_artifacts.json"
+      },
+      "--checkpoint_path": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "New output destination; not a historical result path"
+      },
+      "--batch_size": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.batch_size"
+        ]
+      },
+      "--learning_rate": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.learning_rate"
+        ]
+      },
+      "--weight": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.weight_decay"
+        ]
+      },
+      "--train_epochs": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.max_epochs"
+        ]
+      },
+      "--patience": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.patience"
+        ]
+      },
+      "--use_gpu": {
+        "status": "INFERRED",
+        "evidence": [
+          "config/args_config.py:get_args_parser",
+          "train_tte.py:main / run_training"
+        ],
+        "note": "Proposed single-GPU execution; historical TTE device was not recorded"
+      },
+      "--device": {
+        "status": "INFERRED",
+        "evidence": [
+          "config/args_config.py:get_args_parser",
+          "train_tte.py:main / run_training"
+        ],
+        "note": "Proposed single-GPU execution; historical TTE device was not recorded"
+      },
+      "--wandb_mode": {
+        "status": "INFERRED",
+        "evidence": [
+          "config/args_config.py:get_args_parser",
+          "train_tte.py:main / run_training"
+        ],
+        "note": "Explicit operational default; historical TTE CLI was not retained"
+      }
+    }
+  },
+  "effective_settings": {
+    "optimizer": {
+      "value": "Adam",
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_tte.py:run_experiment optimizer"
+      ]
+    },
+    "scheduler": {
+      "value": {
+        "type": "cosine_with_warmup",
+        "warmup_fraction": 0.1
+      },
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_tte.py:run_experiment scheduler"
+      ]
+    },
+    "selection": {
+      "value": {
+        "metric": "mae_seconds",
+        "direction": "minimize",
+        "ties_replace": false
+      },
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.selection_metric",
+        "train_tte.py:tte_validation_improved"
+      ]
+    },
+    "dataloader_num_workers": {
+      "value": 0,
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_tte.py:DataLoader(num_workers=0)"
+      ]
+    },
+    "test_protocol": {
+      "value": "Reload best validation-selected checkpoint, then evaluate test split once",
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_tte.py:run_experiment"
+      ]
+    },
+    "max_epochs_not_best_epoch": {
+      "value": true,
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.max_epochs",
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:epoch"
+      ]
+    },
+    "loss": {
+      "value": "SmoothL1(beta=1.0)",
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.loss"
+      ]
+    },
+    "target_normalization": {
+      "value": {
+        "mean_seconds": 485.50155132816224,
+        "std_seconds": 350.44401804624164,
+        "source": "training_split_only"
+      },
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/tte_results.json:target_normalization",
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:target_normalization"
+      ]
+    },
+    "prediction_clipping": {
+      "value": false,
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.prediction_clipping"
+      ]
+    },
+    "temporal_input": {
+      "value": "departure_only",
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:configuration.temporal_input"
+      ]
+    }
+  },
+  "required_runtime_artifacts": [
+    "bigcity_pretrained",
+    "gpt2_config",
+    "gpt2_weights",
+    "gpt2_merges",
+    "gpt2_vocab",
+    "gpt2_tokenizer_config",
+    "full_metadata",
+    "relation_cache",
+    "static_cache",
+    "dynamic_controlled_cache",
+    "tte_train_cache",
+    "tte_validation_cache",
+    "tte_test_cache",
+    "tte_structured_cache"
+  ],
+  "outputs": {
+    "checkpoint": "{RUN_ROOT}/tte_structured/checkpoint/best_tte_tte_structured_seed2021.pth",
+    "logs": "{BIGCITY_ROOT}/logs/tte_tte_structured_seed2021/",
+    "note": "Runner ignores --log_path; fixed ./logs directory can reuse filenames on repeated runs"
+  },
+  "historical": {
+    "checkpoint_metadata": {
+      "path": "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth",
+      "status": "CONFIRMED",
+      "configuration": {
+        "task": "tte",
+        "city": "xa",
+        "semantic_mode": "tte_structured",
+        "seq_len": 64,
+        "sample_rate": 1,
+        "dynamic_mode": "controlled",
+        "static_ablation": "none",
+        "seed": 2021,
+        "batch_size": 32,
+        "learning_rate": 0.0002,
+        "weight_decay": 0,
+        "max_epochs": 20,
+        "patience": 3,
+        "loss": "SmoothL1(beta=1.0)",
+        "selection_metric": "mae_seconds",
+        "prediction_clipping": false,
+        "temporal_input": "departure_only",
+        "target": "trip_duration_seconds"
+      }
+    },
+    "best_epoch": {
+      "value": 11,
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth:epoch",
+        "final_results/tte/02_structured/tte_results.json:best_epoch"
+      ]
+    },
+    "result_reference": "final_results/tte/02_structured/tte_results.json",
+    "expected_test_metrics": {
+      "status": "CONFIRMED",
+      "values": {
+        "mae_seconds": 94.42844921622998,
+        "rmse_seconds": 154.00982398476586,
+        "mape_percent": 24.22731526821154,
+        "sample_count": 76923
+      },
+      "note": "Descriptive archived results, not exact acceptance thresholds for newly trained weights"
+    },
+    "training_source_commit": {
+      "value": null,
+      "status": "INFERRED",
+      "note": "Historical TTE execution revision is not recorded; current source is the reviewed implementation"
+    },
+    "execution_command": {
+      "status": "INFERRED",
+      "note": "Command reconstructed from saved checkpoint configuration and current runner; no archived TTE argv found"
+    },
+    "python": {
+      "value": null,
+      "status": "INFERRED",
+      "note": "Current environment uses Python 3.12.10; historical TTE Python not independently recorded"
+    },
+    "evidence_path_scope": "Paths refer to the protected research archive; checkpoint payloads are not distributed"
+  }
+}

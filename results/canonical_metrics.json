@@ -1,0 +1,100 @@
+{
+  "scope": "Canonical six experiments, historical selected checkpoints; not measurements from PHASE5 training.",
+  "experiments": [
+    {
+      "id": "nh_baseline",
+      "task": "next_hop",
+      "semantic_mode": "none",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 10,
+      "metrics": {
+        "accuracy_percent": 77.91427791427792,
+        "mrr_at_5_percent": 86.75105844909584,
+        "ndcg_at_5_percent": 89.52167429952159
+      },
+      "source_path": "final_analysis/next_hop/statistics/next_hop_model_metrics.csv",
+      "source_sha256": "12AE0FBF6CA069B5532A28880BC8411BBFA4D362684AC93291C7E95C4A227B89"
+    },
+    {
+      "id": "nh_poi_tfidf",
+      "task": "next_hop",
+      "semantic_mode": "poi_tfidf",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 6,
+      "metrics": {
+        "accuracy_percent": 79.55747955747955,
+        "mrr_at_5_percent": 88.46647515917864,
+        "ndcg_at_5_percent": 91.11678217523757
+      },
+      "source_path": "final_analysis/next_hop/statistics/next_hop_model_metrics.csv",
+      "source_sha256": "12AE0FBF6CA069B5532A28880BC8411BBFA4D362684AC93291C7E95C4A227B89"
+    },
+    {
+      "id": "nh_qwen_poi",
+      "task": "next_hop",
+      "semantic_mode": "poi_qwen_tfidf",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 8,
+      "metrics": {
+        "accuracy_percent": 79.82397982397983,
+        "mrr_at_5_percent": 88.55977191893322,
+        "ndcg_at_5_percent": 91.1645204899653
+      },
+      "source_path": "final_analysis/next_hop/statistics/next_hop_model_metrics.csv",
+      "source_sha256": "12AE0FBF6CA069B5532A28880BC8411BBFA4D362684AC93291C7E95C4A227B89"
+    },
+    {
+      "id": "tte_baseline",
+      "task": "tte",
+      "semantic_mode": "none",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 16,
+      "metrics": {
+        "mae_seconds": 95.4379781688284,
+        "rmse_seconds": 156.9819219361769,
+        "mape_percent": 22.816461166436167
+      },
+      "source_path": "final_results/tte/01_baseline/tte_results.json",
+      "source_sha256": "E7631865C7D183B40C0C3D449A4638AB46B8A9E5F8FFD654F2F85D49619B0443",
+      "historical_checkpoint_sha256": "D3D3D03A116943F5BCD4DC7CEBB6FAE8B786643B90A942B06B17A43F4560B37E"
+    },
+    {
+      "id": "tte_structured",
+      "task": "tte",
+      "semantic_mode": "tte_structured",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 11,
+      "metrics": {
+        "mae_seconds": 94.42844921622998,
+        "rmse_seconds": 154.00982398476586,
+        "mape_percent": 24.22731526821154
+      },
+      "source_path": "final_results/tte/02_structured/tte_results.json",
+      "source_sha256": "07B7669BD06477029E3F4ADB1806156CC4ED7BD3D52BDE87724331048B8DD4A7",
+      "historical_checkpoint_sha256": "1425066115D9BF346208A3D0F5F34DCA8CF915E82177B008EB8185264B58B142"
+    },
+    {
+      "id": "tte_qwen",
+      "task": "tte",
+      "semantic_mode": "tte_qwen",
+      "seed": 2021,
+      "sample_count": 76923,
+      "best_epoch": 13,
+      "metrics": {
+        "mae_seconds": 94.86113049945142,
+        "rmse_seconds": 155.63926646896786,
+        "mape_percent": 22.52686125942081
+      },
+      "source_path": "final_results/tte/03_qwen/tte_results.json",
+      "source_sha256": "0BE722F2CB74245E33B2EBF863BA6EF582DBED15CBDB9B913BF1B715FD58234A",
+      "historical_checkpoint_sha256": "75AEF28F6CB81EDF9315583E1A129F5BA9F03E465A11C295EF4EB43669DC713C"
+    }
+  ],
+  "statistical_scope": "One training seed; paired test-sample uncertainty conditional on these checkpoints.",
+  "precision_note": "TTE runner metrics and aggregate CSVs reconstructed from predictions differ slightly at floating-point precision; tables and plots agree at the displayed precision."
+}

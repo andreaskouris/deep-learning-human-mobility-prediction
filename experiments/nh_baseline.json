@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "id": "nh_baseline",
+  "name": "NH Baseline",
+  "task": "next_hop",
+  "semantic_mode": "none",
+  "environment": "bigcity",
+  "runner": "train_next_hop.py",
+  "working_directory": "{BIGCITY_ROOT}",
+  "cli": {
+    "--task_name": "next_hop",
+    "--dataset_path": "{DATASET_ROOT}",
+    "--city": "xa",
+    "--split": "train",
+    "--seq_len": 64,
+    "--sample_rate": 1,
+    "--seed": 2021,
+    "--dynamic_mode": "controlled",
+    "--static_ablation": "none",
+    "--semantic_mode": "none",
+    "--pretrained_checkpoint": "{PRETRAINED_CHECKPOINT}",
+    "--checkpoint_path": "{RUN_ROOT}/nh_baseline/checkpoint",
+    "--batch_size": 32,
+    "--learning_rate": 0.0002,
+    "--weight": 0,
+    "--train_epochs": 20,
+    "--patience": 3,
+    "--use_gpu": true,
+    "--device": "0",
+    "--wandb_mode": "offline",
+    "--log_path": "{RUN_ROOT}/nh_baseline/logs"
+  },
+  "provenance": {
+    "cli": {
+      "--task_name": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--dataset_path": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "Explicit replacement for historical default ../dataset/"
+      },
+      "--city": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--split": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--seq_len": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--sample_rate": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--seed": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args",
+          "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:configuration.seed"
+        ]
+      },
+      "--dynamic_mode": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--static_ablation": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--semantic_mode": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--pretrained_checkpoint": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "Artifact identity is independently CONFIRMED in external_artifacts.json"
+      },
+      "--checkpoint_path": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "New output destination; not a historical result path"
+      },
+      "--batch_size": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--learning_rate": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--weight": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:configuration.weight_decay",
+          "config/args_config.py:get_args_parser default --weight=0"
+        ]
+      },
+      "--train_epochs": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--patience": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--use_gpu": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--device": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--wandb_mode": {
+        "status": "CONFIRMED",
+        "evidence": [
+          "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args"
+        ]
+      },
+      "--log_path": {
+        "status": "INFERRED",
+        "evidence": [
+          "Portable path placeholder chosen in PHASE2; original path is not part of scientific settings",
+          "config/args_config.py:get_args_parser"
+        ],
+        "note": "New output destination; not a historical result path"
+      }
+    }
+  },
+  "effective_settings": {
+    "optimizer": {
+      "value": "Adam",
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_next_hop.py:run_experiment optimizer"
+      ]
+    },
+    "scheduler": {
+      "value": {
+        "type": "cosine_with_warmup",
+        "warmup_fraction": 0.1
+      },
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_next_hop.py:run_experiment scheduler"
+      ]
+    },
+    "selection": {
+      "value": {
+        "metric": "accuracy",
+        "direction": "maximize",
+        "ties_replace": false
+      },
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:configuration.selection_metric",
+        "train_next_hop.py:validation_improved"
+      ]
+    },
+    "dataloader_num_workers": {
+      "value": 0,
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_next_hop.py:DataLoader(num_workers=0)"
+      ]
+    },
+    "test_protocol": {
+      "value": "Reload best validation-selected checkpoint, then evaluate test split once",
+      "status": "CONFIRMED",
+      "evidence": [
+        "train_next_hop.py:run_experiment"
+      ]
+    },
+    "max_epochs_not_best_epoch": {
+      "value": true,
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:configuration.max_epochs",
+        "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:epoch"
+      ]
+    }
+  },
+  "required_runtime_artifacts": [
+    "bigcity_pretrained",
+    "gpt2_config",
+    "gpt2_weights",
+    "gpt2_merges",
+    "gpt2_vocab",
+    "gpt2_tokenizer_config",
+    "full_metadata",
+    "relation_cache",
+    "static_cache",
+    "dynamic_controlled_cache",
+    "nh_train_cache",
+    "nh_validation_cache",
+    "nh_test_cache"
+  ],
+  "outputs": {
+    "checkpoint": "{RUN_ROOT}/nh_baseline/checkpoint/best_next_hop.pth",
+    "logs": "{RUN_ROOT}/nh_baseline/logs/<timestamp>/",
+    "note": "Runner appends timestamp to --log_path"
+  },
+  "historical": {
+    "checkpoint_metadata": {
+      "path": "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth",
+      "status": "CONFIRMED",
+      "configuration": {
+        "city": "xa",
+        "seq_len": 64,
+        "sample_rate": 1,
+        "dynamic_mode": "controlled",
+        "seed": 2021,
+        "batch_size": 32,
+        "learning_rate": 0.0002,
+        "weight_decay": 0,
+        "max_epochs": 20,
+        "patience": 3,
+        "selection_metric": "accuracy"
+      }
+    },
+    "best_epoch": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "evidence": [
+        "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth:epoch",
+        "final_results/next_hop/01_baseline/logs/2026-09-20_00-11-20/next_hop_final_results.json:best_epoch"
+      ]
+    },
+    "result_reference": "final_results/next_hop/01_baseline/logs/2026-09-20_00-11-20/next_hop_final_results.json",
+    "expected_test_metrics": {
+      "status": "CONFIRMED",
+      "values": {
+        "accuracy": 0.7791427791427792,
+        "mrr@5": 0.86751059731559,
+        "ndcg@5": 0.8952167481925936,
+        "num_samples": 76923
+      },
+      "note": "Descriptive archived results, not exact acceptance thresholds for newly trained weights"
+    },
+    "training_source_commit": {
+      "value": "2a12bb8d7df68c708b9ceac8537f725582fed8da",
+      "status": "CONFIRMED",
+      "evidence": [
+        "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:git.commit"
+      ]
+    },
+    "execution_command": {
+      "status": "CONFIRMED",
+      "evidence": "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:args",
+      "note": "Scientific arguments retained; portable I/O placeholders replace original paths"
+    },
+    "python": {
+      "value": "CPython 3.12.10",
+      "status": "CONFIRMED",
+      "evidence": [
+        "wandb/offline-run-20260920_001121-axm4zbhn/files/wandb-metadata.json:python"
+      ]
+    },
+    "evidence_path_scope": "Paths refer to the protected research archive; checkpoint payloads are not distributed"
+  }
+}

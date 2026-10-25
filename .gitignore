@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.venv*/
+.pytest_cache/
+.phase*-staging/
+private-runtime/
+private-bundle/
+dataset/
+datasets/
+checkpoints/
+runs/
+hf_cache*/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.pkl
+*.npz
+
+# Official source and generated derived runtimes remain outside the thesis clone.
+BIGCity/
+BIGCity-official/
+adapted-runtime*/
+
+# Override research-archive ancestor rules in this candidate.
+!tests/
+!tests/**/*.py

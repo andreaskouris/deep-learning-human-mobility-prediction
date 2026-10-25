@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "check": "Portable GPT-2 backbone: complete module",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "NH integer-precision loader: complete task class",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "FineTune forward",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "FineTune encode_prompt_ids",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "FineTune build_prompt",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Graph tokenizer: canonical static-none expression normalization",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "FileLoader: complete class under controlled profile",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function initialize_semantics",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function apply_semantic_enrichment",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function _prepare_pretrained_state_dict",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function preprocess_controlled",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function masked_tte_cross_attention",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function apply_tte_semantic_enrichment",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function pack_tte_tokens",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Unchanged public scientific function forward_tte",
+      "status": "VERIFIED_AST"
+    },
+    {
+      "check": "Checkpoint loading/validation: exact extracted body",
+      "status": "VERIFIED_AST"
+    }
+  ],
+  "count": 16,
+  "canonical_configs_byte_identical": 6,
+  "TTE_hook": "PARTIALLY_VERIFIED: canonical source differs, synthetic tokens and gradients match for five fixtures; real weights/GPU not tested",
+  "profile": "controlled/static-none; legacy original, BGE and functional ablation unsupported"
+}

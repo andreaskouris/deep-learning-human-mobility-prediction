@@ -1,0 +1,8 @@
+# Source fingerprints use exact LF bytes in every checkout.
+* text eol=lf
+
+# Archived scientific outputs retain their original serialized bytes.
+results/** -text
+assets/figures/** -text
+*.csv -text
+*.svg -text

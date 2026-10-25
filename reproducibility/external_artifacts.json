@@ -1,0 +1,828 @@
+{
+  "schema_version": 1,
+  "scope": "Six canonical experiments only. Upstream/derived implementation, datasets, model weights and generated caches are not distributed.",
+  "source_revisions": {
+    "bigcity": {
+      "url": "https://github.com/bigscity/BIGCity",
+      "commit": "5f7168bf7a43c3a40e19e4a80cdb6d77b080edec",
+      "status": "CONFIRMED",
+      "distribution": "Acquire externally; do not vendor",
+      "license_status": "UNRESOLVED; permission to redistribute modified upstream code or patches is not assumed"
+    },
+    "thesis_research_head": "8bafa12f4c77ee3013ed7d1d69a20090bd69bfac",
+    "phase1_builders_commit": "ad99e48a391ac27f32ed5bef1670fb614ace77c7",
+    "extension_delivery_status": "PHASE6: public source transformations and independent hooks derive all required canonical modules from the official pinned checkout; no private payload/history input. Generated upstream-derived output remains local."
+  },
+  "placeholders": {
+    "BIGCITY_ROOT": "Explicit separately assembled runtime; GPT-2 assets are bound with --gpt2_path by the portable command resolver.",
+    "DATASET_ROOT": "Parent directory containing xa/; never the xa/ directory itself",
+    "PRETRAINED_CHECKPOINT": "Official XA pretrained file, not a fine-tuned thesis checkpoint",
+    "RUN_ROOT": "Writable root for newly trained checkpoints and per-run NH/TTE logs."
+  },
+  "artifacts": [
+    {
+      "id": "xa_road",
+      "path_template": "{DATASET_ROOT}/xa/road_xa.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "D154AD2691A19C44303DC33E64EDA4A3817C667915D993BE9A06AAD3E0FB6CE7",
+      "canonical_size_bytes": 1754637,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_poi",
+      "path_template": "{DATASET_ROOT}/xa/POI_xa.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "DCC0F0F693528953A907135199DA7B27397E76C9F9639A1D5B177A798F35345D",
+      "canonical_size_bytes": 1165655,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_road2poi",
+      "path_template": "{DATASET_ROOT}/xa/road2poi_xa.json",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "C17F3796AE849EE16573D5DED3EB8C0DE5AF30F6C050CB4BC2D9FD2CFBE49BEC",
+      "canonical_size_bytes": 182394,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_rel",
+      "path_template": "{DATASET_ROOT}/xa/roadmap_xa/roadmap_xa.rel",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "145063C82CF1606ED14D91C0ACBECC71AE97B7345EB956A752B1074FAB1ED6E1",
+      "canonical_size_bytes": 557289,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_static_features",
+      "path_template": "{DATASET_ROOT}/xa/roadmap_xa/road_features_xa.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "216946652825506CE7B7751CF6795ED1D7759484D2C9B115BD2FD434A3B1F28E",
+      "canonical_size_bytes": 122827,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_geo",
+      "path_template": "{DATASET_ROOT}/xa/roadmap_xa/roadmap_xa.geo",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "0A9037312B59DD311A61B20C95A28D447279DA3DBEEDEC77ADDE141C0343FACA",
+      "canonical_size_bytes": 1279035,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_sem",
+      "path_template": "{DATASET_ROOT}/xa/roadmap_xa/roadmap_xa.sem",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "FA6A8CB6154836368B1F938B13F0C8676F234F23F35291639E91FD4B6F7CBC52",
+      "canonical_size_bytes": 429079,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_full_trajectories",
+      "path_template": "{DATASET_ROOT}/xa/traj_xa_11.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "0F1F85574B0B4C6BAD6605C2B130213774FD361CFFB2E7068661F0849582A6EB",
+      "canonical_size_bytes": 160194246,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_dynamic",
+      "path_template": "{DATASET_ROOT}/xa/xa.dyna",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "BFF3B4851F56ACACEA6E21591C25120368B9E6EE2FA3E8605E8C2358F85E9B77",
+      "canonical_size_bytes": 873773164,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_train_trajectories",
+      "path_template": "{DATASET_ROOT}/xa/traj_xa_train.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "8EB480923E25A607A00FA2D03A07557CB8778748ABE8A5336FDB3A5A1E160705",
+      "canonical_size_bytes": 95568773,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_validation_trajectories",
+      "path_template": "{DATASET_ROOT}/xa/traj_xa_validation.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "D3DF3121D2EA8CA18FD9C3A102712242BBA9F2963490C1A5FF683CF27473BCBA",
+      "canonical_size_bytes": 32370297,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "xa_test_trajectories",
+      "path_template": "{DATASET_ROOT}/xa/traj_xa_test.csv",
+      "kind": "xa_source",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "71F0BA280E9F4C40F7CBBE355930EA1A82AD45E11AFC2F31E6B2506440F47568",
+      "canonical_size_bytes": 32088599,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/datasets/XieYuBUAA/BIGCity_Dataset",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Local XA bytes identified; downloaded archive revision and split-generation provenance not fully recorded."
+    },
+    {
+      "id": "full_metadata",
+      "path_template": "{DATASET_ROOT}/xa/cached_meta_xa_full_seq64_sr1_seed2021_v2.json",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "CEAE086A96DB0439AB3662ACC30AD1973179E2DBDE30EAFC36C052561DC7658E",
+      "canonical_size_bytes": 137,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "relation_cache",
+        "static_cache",
+        "dynamic_controlled_cache",
+        "xa_rel",
+        "xa_static_features",
+        "xa_full_trajectories"
+      ],
+      "builder": "scripts/build_full_metadata.py",
+      "semantic_contract": {
+        "edge_cnt": 13032,
+        "road_cnt": 5269,
+        "time_slots_cnt": 2928,
+        "traj_cnt": 384618,
+        "traj_category_cnt": 26787
+      }
+    },
+    {
+      "id": "relation_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_relation.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "C2A64C90B80035A4FD363C9AFABD114CB967662879BD1A065D9005F92C0F1666",
+      "canonical_size_bytes": 262170,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_rel"
+      ],
+      "builder": "scripts/build_structural_caches.py"
+    },
+    {
+      "id": "static_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_static.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "D10944963B06F398989EE956B35F23CA236D804664986CD077BE3E7BD80EAB9C",
+      "canonical_size_bytes": 338505,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_static_features"
+      ],
+      "builder": "scripts/build_structural_caches.py"
+    },
+    {
+      "id": "dynamic_controlled_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_dynamic_controlled_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "6E543593BB044A1A8CB16BB65EFA012067AF0C050C42016CF69A88F042F412D3",
+      "canonical_size_bytes": 61711976,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_dynamic"
+      ],
+      "builder": "scripts/build_dynamic_cache.py"
+    },
+    {
+      "id": "poi_tfidf_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_semantic_tfidf_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "118DADD89F2A0CCF573078C01CDC09C41BF0865BA23F433709AC32775584D989",
+      "canonical_size_bytes": 8610428,
+      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_poi",
+        "xa_road2poi",
+        "xa_geo",
+        "xa_sem"
+      ],
+      "builder": "scripts/build_semantic_cache.py",
+      "semantic_contract": {
+        "shape": [
+          5269,
+          204
+        ],
+        "type_order": "sorted TYPE strings",
+        "normalization": "L2 per active road"
+      }
+    },
+    {
+      "id": "qwen_type_prototypes",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_language_type_prototypes_qwen3_0_6b_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "35AA4213FE0B7BBAD5685ECCA572CBB97B81DDFFD35897FD3B3233AD9750F7C6",
+      "canonical_size_bytes": 844687,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_poi",
+        "qwen_model"
+      ],
+      "builder": "scripts/build_language_semantic_cache.py",
+      "semantic_contract": {
+        "shape": [
+          204,
+          1024
+        ],
+        "type_order": "sorted TYPE strings",
+        "max_seq_length": 32
+      }
+    },
+    {
+      "id": "qwen_poi_road_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_language_road_semantic_qwen3_0_6b_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "33E071172E1BC7F14BFE7A6D8F268312A526677F8C3E7DC29C5C4B94A98D2E95",
+      "canonical_size_bytes": 43173914,
+      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "poi_tfidf_cache",
+        "qwen_type_prototypes"
+      ],
+      "builder": "scripts/build_language_road_semantic_cache.py",
+      "semantic_contract": {
+        "shape": [
+          5269,
+          1024
+        ],
+        "active_roads": 2675,
+        "zero_roads": 2594
+      }
+    },
+    {
+      "id": "tte_structured_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_tte_semantics_binary_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "081952F5ABD0A5E005430113EACC7E516A76CF2210E8FF346039508982416717",
+      "canonical_size_bytes": 212466,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_road",
+        "xa_poi",
+        "xa_road2poi"
+      ],
+      "builder": "scripts/build_tte_structured_semantic_cache.py",
+      "semantic_contract": {
+        "shape": [
+          5269,
+          10
+        ],
+        "dtype": "float32",
+        "tensor_sha256": "52EAE4C2E30FF4A91858645A37AFE59BC0E1882D1DBA8543FAE1E0E95EF7F189",
+        "support_counts": [
+          61,
+          151,
+          33,
+          2043,
+          27,
+          300,
+          7,
+          238,
+          831,
+          5
+        ],
+        "active_roads": 2437,
+        "zero_roads": 2832,
+        "features": [
+          "tunnel",
+          "bridge",
+          "roundabout",
+          "oneway",
+          "fuel_station",
+          "parking",
+          "transport_hub",
+          "taxi_stand",
+          "transit_stop",
+          "logistics_freight"
+        ]
+      }
+    },
+    {
+      "id": "tte_structured_metadata",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_tte_semantics_binary_v1.meta.json",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "42916BE46167F41FB6DBDDEF3EBADFDC2D0F081FD365ABB0B0EE28870173D0C9",
+      "canonical_size_bytes": 1412,
+      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "tte_structured_cache"
+      ],
+      "builder": "scripts/build_tte_structured_semantic_cache.py"
+    },
+    {
+      "id": "tte_qwen_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_tte_semantics_qwen_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "31FA484DDB3FC9423F44C495E8A26366C4EBD21518124F28E33902EE06966DAF",
+      "canonical_size_bytes": 21625512,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "tte_structured_cache",
+        "qwen_model"
+      ],
+      "builder": "scripts/build_tte_qwen_semantic_cache.py",
+      "semantic_contract": {
+        "shape": [
+          5269,
+          1024
+        ],
+        "dtype": "float32",
+        "active_roads": 2437,
+        "zero_roads": 2832,
+        "concept_count": 10
+      },
+      "historical_model_revision_status": "UNCONFIRMED; the NH Qwen snapshot revision is not proof of the historical TTE Qwen revision."
+    },
+    {
+      "id": "tte_qwen_metadata",
+      "path_template": "{DATASET_ROOT}/xa/cached_xa_tte_semantics_qwen_v1.meta.json",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "369EC1929072C27C3B97D283EA2473DEED694D1917793EF8C1C9D7920DFB5021",
+      "canonical_size_bytes": 2042,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "tte_qwen_cache"
+      ],
+      "builder": "scripts/build_tte_qwen_semantic_cache.py",
+      "historical_model_revision_status": "UNCONFIRMED; the NH Qwen snapshot revision is not proof of the historical TTE Qwen revision."
+    },
+    {
+      "id": "nh_train_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_next_hop_dataset_train_seq64_sr1_seed2021_v2.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "01147799B0D09AF08A45B1053F33AE72D70F0E01FF14064F315FF799F32DA739",
+      "canonical_size_bytes": 533542928,
+      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_train_trajectories",
+        "xa_full_trajectories"
+      ],
+      "builder": "scripts/build_next_hop_cache.py"
+    },
+    {
+      "id": "nh_validation_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_next_hop_dataset_validation_seq64_sr1_seed2021_v2.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "51C61F51BD68E8AD5270A0A5F68DA58500AA4CE6D7A8D385E195602BDB85959A",
+      "canonical_size_bytes": 177848696,
+      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_validation_trajectories",
+        "xa_full_trajectories"
+      ],
+      "builder": "scripts/build_next_hop_cache.py"
+    },
+    {
+      "id": "nh_test_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_next_hop_dataset_test_seq64_sr1_seed2021_v2.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "FAFCBB6A7DB3BEC52A091744A8971E24EAD3790FE705A662875D30F2C5BD2F04",
+      "canonical_size_bytes": 177848648,
+      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_test_trajectories",
+        "xa_full_trajectories"
+      ],
+      "builder": "scripts/build_next_hop_cache.py"
+    },
+    {
+      "id": "tte_train_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_tte_dataset_train_seq64_sr1_seed2021_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "B02559DA75BDD1AE62DCB12A17DE1457459DEA128846A20864F079D44004EFD6",
+      "canonical_size_bytes": 552105649,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_train_trajectories",
+        "full_metadata"
+      ],
+      "builder": "scripts/verify_tte_dataset.py"
+    },
+    {
+      "id": "tte_validation_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_tte_dataset_validation_seq64_sr1_seed2021_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "92937821CE885B61F645C8E76CAB6CBCB8F802124573B47260225066FE452DE2",
+      "canonical_size_bytes": 184081064,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_validation_trajectories",
+        "full_metadata"
+      ],
+      "builder": "scripts/verify_tte_dataset.py"
+    },
+    {
+      "id": "tte_test_cache",
+      "path_template": "{DATASET_ROOT}/xa/cached_tte_dataset_test_seq64_sr1_seed2021_v1.pth",
+      "kind": "derived_cache",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "72E4B427CC9EDD5F66ACFD8931E5A495583EA58265B62F5B0093AFA5058AA0DA",
+      "canonical_size_bytes": 184080806,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
+      "depends_on": [
+        "xa_test_trajectories",
+        "full_metadata"
+      ],
+      "builder": "scripts/verify_tte_dataset.py"
+    },
+    {
+      "id": "gpt2_config",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/config.json",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "0DAED7749B4F02B8F76240D5444551D7B08712DAB4D0ADB8239C56BA823BB7B4",
+      "canonical_size_bytes": 665,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main."
+    },
+    {
+      "id": "gpt2_merges",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/merges.txt",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "1CE1664773C50F3E0CC8842619A93EDC4624525B728B188A9E0BE33B7726ADC5",
+      "canonical_size_bytes": 456318,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main."
+    },
+    {
+      "id": "gpt2_weights",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/pytorch_model.bin",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "7C5D3F4B8B76583B422FCB9189AD6C89D5D97A094541CE8932DCE3ECABDE1421",
+      "canonical_size_bytes": 548118077,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main."
+    },
+    {
+      "id": "gpt2_tokenizer_json",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/tokenizer.json",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "8414CAB924D8B9B33013F0D221C5862F365EE9BE39C5C2BFAE8A5A9E970478A6",
+      "canonical_size_bytes": 1355256,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main.",
+      "runtime_required": false,
+      "note": "Optional asset from the original download bundle; slow GPT2Tokenizer does not require tokenizer.json."
+    },
+    {
+      "id": "gpt2_tokenizer_config",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/tokenizer_config.json",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "5E04EB606E3A1583530A42E36C2A6B6615C86F34FE77E44D9DDEB43FF940931F",
+      "canonical_size_bytes": 26,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main."
+    },
+    {
+      "id": "gpt2_vocab",
+      "path_template": "{BIGCITY_ROOT}/models/gpt2/vocab.json",
+      "kind": "gpt2_asset",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "196139668BE63F3B5D6574427317AE82F612A97C5D1CDAF36ED2256DBF636783",
+      "canonical_size_bytes": 1042301,
+      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/openai-community/gpt2",
+      "source_revision": null,
+      "revision_status": "UNRESOLVED",
+      "revision_note": "Canonical local asset bytes hashed; historical remote revision not recorded. download.py uses mutable main."
+    },
+    {
+      "id": "bigcity_pretrained",
+      "path_template": "{PRETRAINED_CHECKPOINT}",
+      "kind": "pretrained_checkpoint",
+      "distribution": "EXTERNAL_ONLY",
+      "status": "CONFIRMED",
+      "canonical_sha256": "612A663D81A3EB3173173D242023D7C4B86B650D103DE9EFB868FCFE0C2DBDA4",
+      "canonical_size_bytes": 529855686,
+      "hash_evidence": "historical NH final-results files.pretrained_sha256 and HF download metadata",
+      "hash_policy": "canonical_input_identity",
+      "depends_on": [],
+      "builder": null,
+      "source_url": "https://huggingface.co/XieYuBUAA/BIGCity",
+      "source_revision": "f5c7e465cb51bb1b5dc98c986ca785b755590932",
+      "revision_status": "CONFIRMED",
+      "revision_evidence": "checkpoints/.cache/huggingface/download/xa_pretrain.pth.metadata"
+    },
+    {
+      "id": "qwen_model",
+      "kind": "embedding_model",
+      "distribution": "EXTERNAL_ONLY",
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+      "source_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "revision_status": "CONFIRMED",
+      "revision_evidence": "scripts/build_language_semantic_cache.py:MODEL_REVISION and local HF refs/main; CONFIRMED for NH, INFERRED for historical TTE generation",
+      "canonical_sha256": null,
+      "hash_policy": "pinned Hugging Face snapshot revision; per-file hashes not audited in PHASE2",
+      "depends_on": []
+    }
+  ],
+  "historical_finetuned_policy": {
+    "distribution": "DO_NOT_PUBLISH",
+    "required_for_new_training": false,
+    "hashes_are_acceptance_criteria": false,
+    "note": "Historical result checkpoint hashes identify archived runs only. A new training run is selected by validation metrics and assessed scientifically, not by matching serialized checkpoint bytes."
+  },
+  "reviewed_source_file_sha256": {
+    "config/args_config.py": "B44047ECD90A0F93FFD5CEC5DCB540314EB039695706EF09EB9A5E0880175D19",
+    "train_next_hop.py": "398518D86F178DCF1B4E5D652B74ADA85B70CC3FBC87E0F5E97501E65304CB00",
+    "train_tte.py": "03AD6497ED31ACD72ABEC7850122D5ADBB158895C1F557D083D35655036983FD",
+    "models/backbone.py": "67B2528E99C72962FF9564FAF855F1B7499E13886A04C2CD495071A0CF976CE6",
+    "models/st_tokenizer.py": "A6BE1D2822A85C3AFBD862660F0F2F9F2601DC88C4F793BE6F6F275C31AC0653",
+    "models/bigcity4finetune.py": "1DE97BD78A98AE4BBB5E16CE68107901432AA0BCC84F54EA3747A02F9F39F70B",
+    "models/bigcity4tte.py": "86A6911C03C0576C616310D0F965F740C523146A1F686ADBF01E486CB54E662A",
+    "data_provider/tte_dataset.py": "A80710D9E73D87EE9965F56A8F1A06836E5386D0917E307F32F94A827AD845D2",
+    "data_provider/cached_next_hop_dataset.py": "1D50A65F01D3718888FD665121E8DA63F71EAFED6087EE4051D837FD42FB2667",
+    "scripts/build_language_semantic_cache.py": "F1EF92534FE43612CC0448BC67718A07745B8BA66A42B727D0724629054161CA",
+    "scripts/build_tte_qwen_semantic_cache.py": "C57FC1643ED8F6E5AB7CAC982F907F0B8906C43AF7269EC8EF605A921CCEBBCB"
+  },
+  "blockers": [
+    "Generated upstream-derived files/backups have unresolved public redistribution rights; source-only integration itself requires no private payload.",
+    "XA source bytes are pinned by SHA256, but archive revision and original split-generation provenance remain unresolved.",
+    "The historical TTE Qwen snapshot revision is unconfirmed; a fresh supplied model revision must be recorded separately.",
+    "Structural and NH cache builder CLIs retain a ../dataset layout requirement; arbitrary dataset-root binding is not implemented there.",
+    "Fine-tuned checkpoints are not distributed; historical verification requires external access, while fresh checkpoints use their own hashes.",
+    "Clean installation and cross-platform reproduction have not been tested."
+  ],
+  "preprocessing_protocol": {
+    "status": "CONFIRMED",
+    "evidence": [
+      "config/global_vars.py:start_time/end_time/interval",
+      "scripts/build_next_hop_cache.py:XA_COUNTS",
+      "data_provider/tte_dataset.py:build_tte_payload"
+    ],
+    "seed": 2021,
+    "seq_len": 64,
+    "sample_rate": 1,
+    "start_time_utc": "2018-10-01T00:00:00Z",
+    "end_time_utc": "2018-11-30T23:30:00Z",
+    "interval_seconds": 1800,
+    "time_slots": 2928,
+    "split_samples": {
+      "train": 230770,
+      "validation": 76923,
+      "test": 76923
+    },
+    "split_generation_status": "UNRESOLVED; canonical split CSV bytes are external inputs, no split algorithm is inferred"
+  },
+  "historical_finetuned_references": [
+    {
+      "experiment": "nh_baseline",
+      "canonical_sha256": "E1AC9DD9010D53814D4B0FB5B79FA38E3D7949EB591E85F3163B5815377580EE",
+      "checkpoint_path_in_archive": "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_next_hop_per_sample.py:EXPERIMENTS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    },
+    {
+      "experiment": "nh_poi_tfidf",
+      "canonical_sha256": "FE8D2A506ECDA4D0EC4595003B5680D0A8C591D21DA5BE7E90B786CAAF0EECC1",
+      "checkpoint_path_in_archive": "final_results/next_hop/02_poi_tfidf/checkpoint/best_next_hop.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_next_hop_per_sample.py:EXPERIMENTS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    },
+    {
+      "experiment": "nh_qwen_poi",
+      "canonical_sha256": "339A6734FE4A02AF870DE5FFDAA7FF7F2BF32900C93BD8689ACBC040BD51676A",
+      "checkpoint_path_in_archive": "final_results/next_hop/03_qwen_poi/checkpoint/best_next_hop.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_next_hop_per_sample.py:EXPERIMENTS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    },
+    {
+      "experiment": "tte_baseline",
+      "canonical_sha256": "D3D3D03A116943F5BCD4DC7CEBB6FAE8B786643B90A942B06B17A43F4560B37E",
+      "checkpoint_path_in_archive": "final_results/tte/01_baseline/checkpoint/best_tte_none_seed2021.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_tte_per_sample.py:MODELS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    },
+    {
+      "experiment": "tte_structured",
+      "canonical_sha256": "1425066115D9BF346208A3D0F5F34DCA8CF915E82177B008EB8185264B58B142",
+      "checkpoint_path_in_archive": "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_tte_per_sample.py:MODELS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    },
+    {
+      "experiment": "tte_qwen",
+      "canonical_sha256": "75AEF28F6CB81EDF9315583E1A129F5BA9F03E465A11C295EF4EB43669DC713C",
+      "checkpoint_path_in_archive": "final_results/tte/03_qwen/checkpoint/best_tte_tte_qwen_seed2021.pth",
+      "status": "CONFIRMED",
+      "hash_evidence": "scripts/export_final_tte_per_sample.py:MODELS",
+      "hash_recomputed_in_phase2": false,
+      "required_for_new_training": false,
+      "must_match_new_run": false,
+      "distribution": "DO_NOT_PUBLISH"
+    }
+  ]
+}
