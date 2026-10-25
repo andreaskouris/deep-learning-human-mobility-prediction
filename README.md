@@ -1,15 +1,14 @@
 # Deep Learning for Human Mobility Prediction
 
-Research code, configurations and selected results for a master's thesis on
-semantic enrichment of **Next-Hop Prediction (NH)** and **Travel-Time Estimation
-(TTE)** using BIGCity as an external research foundation.
+This project implements semantic enrichment for **Next-Hop Prediction (NH)** and
+**Travel-Time Estimation (TTE)** in the master's thesis *Deep Learning for Human
+Mobility Prediction*. It extends [BIGCity](https://github.com/bigscity/BIGCity)
+with task-specific models, preprocessing, six experiment configurations, evaluation
+and statistical analysis.
 
-**Status:** standalone source integration is verified for the six canonical
-configurations. The repository includes the actual thesis runners, task/semantic
-models, preprocessing and analysis. A supplied pinned official BIGCity checkout
-is adapted locally with no private bundle or thesis Git-history dependency.
-Real-weight reproduction is not tested. Generated upstream-derived files remain
-local while redistribution rights and the author's release license are unresolved.
+Start with [installation and BIGCity integration](docs/installation.md), then
+follow the [reproduction guide](docs/reproduction.md) and
+[command reference](docs/workflow.md).
 
 ## Research overview
 
@@ -17,7 +16,6 @@ The thesis studies whether road-context semantics improve mobility prediction
 under a common experimental protocol. It contributes task-specific semantic
 cache builders, controlled experiment specifications, strict artifact checks,
 paired statistical analysis and reproducibility tooling for six final XA runs.
-Earlier exploratory experiments are outside this repository.
 
 [BIGCity](https://github.com/bigscity/BIGCity) supplies the original spatiotemporal
 representation and model foundation. See Yu et al.,
@@ -54,21 +52,20 @@ The structured cache is a **5,269 x 10 float32 binary tensor**. TTE Qwen introdu
 no additional road facts: it embeds fixed descriptions of these concepts and
 preserves exact zeros for roads with no active facts. For every semantic mode,
 the model normalizes nonzero rows and uses a bias-free, zero-initialized projection
-to the 768-dimensional backbone representation. The new task/semantic implementation is published in `models/bigcity4tte.py` and
-`models/thesis_semantics.py`; required upstream parents are derived locally from the official checkout. The
-independent TTE attention-hook adapter is included.
+to the 768-dimensional backbone representation. The task and semantic extensions
+are implemented in `models/bigcity4tte.py` and `models/thesis_semantics.py`.
+Required upstream modules are adapted locally during integration.
 
 All six configurations retain seed **2021**, batch size **32**, learning rate
 **0.0002**, weight decay **0**, maximum **20 epochs**, patience **3**, controlled
 dynamic mode and `static_ablation=none`. NH checkpoints are selected by strictly
 higher validation accuracy; TTE checkpoints by strictly lower validation MAE.
-TTE uses training-split target normalization and SmoothL1 loss. The configurations
-are specifications, not automatically executed training jobs.
+TTE uses training-split target normalization and SmoothL1 loss.
 
 ## Canonical results
 
-Each task uses **76,923 test samples**. These are archived final results, not new
-measurements made while preparing this repository.
+Each task uses **76,923 test samples**. The tables below report the final thesis
+results; exact values and provenance are retained with the aggregate outputs.
 
 | NH experiment | Accuracy (%) | MRR@5 (%) | NDCG@5 (%) | Best epoch |
 | --- | ---: | ---: | ---: | ---: |
@@ -116,10 +113,10 @@ results/, assets/figures/       selected archived aggregate results and final fi
 docs/                          installation, reproduction and upstream changes
 ```
 
-No upstream source/replacement payload, dataset, model weight, generated cache or
-per-sample record is shipped. The [exact inventory](docs/file_selection.md) records
-roles/dependencies; [UPSTREAM_CHANGES.md](docs/UPSTREAM_CHANGES.md) covers all eight
-locally applied modifications and the formerly private reused bodies.
+The [source inventory](docs/file_selection.md) describes each component.
+[Upstream adaptations](docs/UPSTREAM_CHANGES.md) documents the eight changes applied
+to external BIGCity source. Data, weights and generated caches are acquired or
+created separately.
 
 ## Install and integrate
 
@@ -128,8 +125,7 @@ The verified interpreter was 3.12.10 on Windows. Scientific environments are
 separate: BIGCity uses Transformers 4.47.1; Qwen uses 4.51.3. Do not merge them.
 The environment snapshots are observed versions, not a clean-install guarantee.
 
-After cloning this thesis repository, acquire BIGCity into a separate directory.
-These acquisition commands are documented recipes; no download was needed here:
+After cloning this repository, acquire BIGCity into a separate directory:
 
 ```sh
 git -c core.autocrlf=false clone --filter=blob:none --no-checkout https://github.com/bigscity/BIGCity.git "$BIGCITY_ROOT"
@@ -148,8 +144,8 @@ outputs fail rather than being repaired or overwritten. No in-place mode exists.
 
 [Installation instructions](docs/installation.md) explain separate environments,
 strict LF source hashes, output safeguards and the actual verification commands.
-All eight changes are automatic for the canonical controlled/static-none profile.
-No copied private tokenizer body or legacy original-mode processor is required.
+The integrator applies all eight changes for the canonical
+controlled/static-none profile.
 
 ## External data and pretrained assets
 
@@ -214,29 +210,25 @@ python -B -m scripts.run_selected_tests --group science --staging-root "$NEW_SCI
 python -B -m scripts.run_selected_tests --group runtime --runtime-root "$ADAPTED_ROOT/runtime" --staging-root "$NEW_RUNTIME_TEST_ROOT"
 ```
 
-Source integration, backup identity, deterministic/repeated runs, failure behavior,
-configuration compatibility and selected CPU synthetic tests are VERIFIED. The
-independent TTE hook matches canonical tokens/helper gradients in five fixtures;
-full real-weight/GPU numerical equivalence is PARTIALLY VERIFIED. Clean installation,
-cross-platform setup, training convergence, new Qwen encoding and full-test
-re-evaluation are NOT TESTED. The optional historical `reference` test group needs
-a separately authorized read-only source reference; normal integration and fresh
-reproduction do not require it. See [verification.md](docs/verification.md).
+Source integration, deterministic outputs, configuration compatibility and
+selected CPU synthetic tests have been verified. The TTE attention adapter matches
+canonical tokens and helper gradients on five synthetic fixtures. See
+[Testing and Verification](docs/verification.md) for coverage and commands.
 
-The displayed metrics/figures are archived final results, not new runs. One seed
-and paired test-sample intervals do not establish training-seed variability.
-No training, optimizer step, real model inference, Qwen generation, full-test
-measurement, package upgrade or large download occurred during preparation.
+Clean installation, other platforms, real-weight/GPU numerical equivalence,
+fresh training convergence, Qwen cache generation and full-test re-evaluation
+have not been tested for this implementation. XA archive/split provenance and
+the historical TTE Qwen revision remain incomplete. The structural and NH cache
+builders require the documented `../dataset` layout.
+
+The results use one training seed. Paired test-sample intervals do not measure
+variation across training seeds. Historical checkpoint verification remains
+separate from evaluating newly trained checkpoints.
 
 ## Citation and licensing
 
-See [CITATION.md](CITATION.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and
-[LICENSE_STATUS.md](LICENSE_STATUS.md). The thesis citation fields await the approved
-institutional record; no author/institution/year is invented.
-
-The public integration code contains independently authored transformations/hooks,
-not upstream replacement payloads. Generated runtimes/backups contain upstream
-material and must remain local while redistribution rights are unresolved.
-Attribution and transformations do not confer those rights. Public release also
-requires the author's license decision. Source automation works without private
-inputs; this does not establish legal clearance or full scientific reproduction.
+[CITATION.md](CITATION.md) identifies the thesis project and BIGCity reference;
+the full institutional thesis citation is not yet confirmed. No license has been
+selected for the thesis-authored code. See [LICENSE_STATUS.md](LICENSE_STATUS.md)
+and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the current terms and
+restrictions, including locally generated BIGCity source and backups.

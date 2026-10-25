@@ -67,6 +67,6 @@
   ],
   "count": 16,
   "canonical_configs_byte_identical": 6,
-  "TTE_hook": "PARTIALLY_VERIFIED: canonical source differs, synthetic tokens and gradients match for five fixtures; real weights/GPU not tested",
+  "TTE_hook": "PARTIALLY_VERIFIED: independent attention adapter matches canonical tokens and helper gradients on five synthetic fixtures; real weights/GPU not tested",
   "profile": "controlled/static-none; legacy original, BGE and functional ablation unsupported"
 }

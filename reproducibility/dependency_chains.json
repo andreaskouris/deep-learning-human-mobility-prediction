@@ -1,5 +1,5 @@
 {
-  "scope": "Six canonical chains using public thesis code and 13 externally supplied official source files; eight locally transformed. No private payload/history source providers. Historical reference tests are comparison-only.",
+  "scope": "Six canonical dependency chains using the thesis implementation and 13 external official BIGCity source files, eight adapted locally. Optional historical reference tests are comparison-only.",
   "experiments": [
     {
       "id": "nh_baseline",

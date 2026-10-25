@@ -8,9 +8,10 @@ from models.layers import MLP
 TTE_PROMPT = 'Predict the travel time of the trajectory, regress the total trip duration'
 
 class BigCity4TTE(TTETokenizationAdapter, BigCity4FineTune):
-    """Trip-level TTE task extension with route and departure-time inputs.
+    """Estimate trip duration from route and departure-time inputs.
 
-The mirrored tokenizer body is supplied by an explicit private adapter."""
+    TTETokenizationAdapter reuses upstream tokenization with PAD-masked attention.
+    """
 
     def __init__(self, device, checkpoint=None):
         """Initialize the TTE head under an isolated experiment RNG state."""

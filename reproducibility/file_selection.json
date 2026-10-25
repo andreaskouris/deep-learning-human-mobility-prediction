@@ -3,87 +3,87 @@
     {
       "path": "final_analysis/next_hop/per_sample/next_hop_per_sample_master.csv",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis/next_hop/per_sample/nh1_baseline_predictions.csv",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis/next_hop/per_sample/nh2_poi_tfidf_predictions.csv",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis/next_hop/per_sample/nh3_qwen_poi_predictions.csv",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis/tte/per_sample/tte_per_sample.csv",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis/tte/per_sample/tte_per_sample_summary.json",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis_script_audit.txt",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_analysis_source_scripts.zip",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/next_hop/01_baseline/checkpoint/best_next_hop.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/next_hop/02_poi_tfidf/checkpoint/best_next_hop.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/next_hop/03_qwen_poi/checkpoint/best_next_hop.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/tte/01_baseline/checkpoint/best_tte_none_seed2021.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/tte/02_structured/checkpoint/best_tte_tte_structured_seed2021.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "final_results/tte/03_qwen/checkpoint/best_tte_tte_qwen_seed2021.pth",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "next_hop_logging_logic.txt",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "train_tte_before_logging_fix.py",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     },
     {
       "path": "tte_help.txt",
       "classification": "EXCLUDED",
-      "reason": "Untracked research artifact/checkpoint/legacy material; never copied into candidate"
+      "reason": "Untracked research artifact/checkpoint/legacy material; not included in the repository"
     }
   ],
   "schema_version": 1,
@@ -94,7 +94,7 @@
     "commit": "5f7168bf7a43c3a40e19e4a80cdb6d77b080edec",
     "tree": "e6d2eb9e0b969a45589e4ebb26a1ae0e1b598275"
   },
-  "scope": "PHASE6 actual thesis code plus transparent source-only integration. Thirteen original BIGCity modules are obtained externally; eight are transformed locally, no private replacement payloads are needed.",
+  "scope": "Thesis source for six canonical experiments and source-only integration. Thirteen official BIGCity modules are external; eight are adapted locally. source_review_head and historical source fingerprints record provenance rather than current file identity.",
   "included": [
     {
       "path": ".gitattributes",
@@ -124,10 +124,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "BE3781CD393643D8FFB1A46A9473ECDE697AED963D08D9862DB183D0D00CA2B4",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "CITATION.md",
@@ -144,10 +144,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "943F165C5983144C3FB5C9608AA244723296324532FDE8129FA7E501A595E941",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "085D5BF5561B3768CF9F71188817C28FE9FECAC92A826549E01887A31994DC24",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "LICENSE_STATUS.md",
@@ -164,10 +164,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "746F71E0133F5D0D9982DD31077685244E0214870FD21248B237CDB09AC32DB1",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "91A64B443C80C3EF323D144A56C414D4493562C6617099915C0E0245657F249F",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "README.md",
@@ -184,10 +184,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "1D416F262D2ED7428B9B9A17736FBE4906A05DC928B08A5CBD69CCBB29A9FE5E",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "AE99DB9CEB2A91F8CC22E4494F9ED4CC81426091F025F449BB8FE95DEA112A00",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -204,10 +204,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "39BB5816DCCBBD606D1A3DFA1744334B3AF23FE1E9B259601C707DFF2758C9AB",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "93DAFCC9E53B45E28BB2D17383CE3AFE8042FC2352D97CA48F59B5BB723CB322",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "assets/figures/figure_5_1_next_hop_aggregate_performance.svg",
@@ -221,7 +221,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-thesis-figure; path=final_analysis/next_hop/figures/figure_5_1_next_hop_aggregate_performance.svg; SHA256=320B220E502711FDE9EF1CEA9740147A08F0F20A79231BAAC985E790E4EB756D",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "320B220E502711FDE9EF1CEA9740147A08F0F20A79231BAAC985E790E4EB756D",
       "provenance_review": "Thesis-generated aggregate/paired uncertainty figure; no upstream illustrations copied."
@@ -238,7 +238,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-thesis-figure; path=final_analysis/next_hop/figures/figure_5_2_next_hop_paired_bootstrap_ci.svg; SHA256=1835ED50A5FDFB5B1D9DE0BAF4C8963CFF49A49B62FD588F5C4253C58A27F37D",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "1835ED50A5FDFB5B1D9DE0BAF4C8963CFF49A49B62FD588F5C4253C58A27F37D",
       "provenance_review": "Thesis-generated aggregate/paired uncertainty figure; no upstream illustrations copied."
@@ -255,7 +255,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-thesis-figure; path=final_analysis/tte/figures/figure_5_5_tte_aggregate_performance.svg; SHA256=0C197144BFCCE3B30431046984462248FBBEC5B06CE81F9A386143526D68329F",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "0C197144BFCCE3B30431046984462248FBBEC5B06CE81F9A386143526D68329F",
       "provenance_review": "Thesis-generated aggregate/paired uncertainty figure; no upstream illustrations copied."
@@ -272,7 +272,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-thesis-figure; path=final_analysis/tte/figures/figure_5_6_tte_paired_bootstrap_ci.svg; SHA256=E8DDEC6FCE9D48E0B824418679C2C705B56665FC470AC209390531BE250B048D",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E8DDEC6FCE9D48E0B824418679C2C705B56665FC470AC209390531BE250B048D",
       "provenance_review": "Thesis-generated aggregate/paired uncertainty figure; no upstream illustrations copied."
@@ -281,13 +281,13 @@
       "path": "config/__init__.py",
       "sha256": "D1ABF1EC945149D1A8DAA4C91B61F98858BDDC38D7A060F2FE677C6F1E8827AE",
       "publication_category": "ORIGINAL_REVIEWED",
-      "role": "Independent candidate namespace marker; generated upstream initializer replaces it only in local runtime",
+      "role": "Independent package marker; generated upstream initializer replaces it in the local runtime",
       "required_by": [
         "ALL_SIX_CANONICAL"
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -300,7 +300,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -318,7 +318,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: new-package-marker; path=None; SHA256=None",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "8A2C9FB2DF95AABDE299DED71881282B0011DE2B8A3BC01E3C9E7C738715F031",
       "provenance_review": "New documentation-only package marker, independently authored; not copied from the upstream package initializer."
@@ -336,8 +336,8 @@
       "evidence": [
         "train_next_hop.py:19: import data_provider.cached_next_hop_dataset",
         "tests/test_cached_next_hop_dataset.py:7: import data_provider.cached_next_hop_dataset",
-        "Verified source: phase4-reviewed-portable-source; path=data_provider/cached_next_hop_dataset.py; SHA256=6F513AC15FD3A91222B1AFC68996570AB2C5F652D1D1577EFEF1F8F5F82C6E83",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=data_provider/cached_next_hop_dataset.py; SHA256=6F513AC15FD3A91222B1AFC68996570AB2C5F652D1D1577EFEF1F8F5F82C6E83",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "6F513AC15FD3A91222B1AFC68996570AB2C5F652D1D1577EFEF1F8F5F82C6E83",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -362,7 +362,7 @@
         "tests/test_dynamic_preprocessing.py:3: import data_provider.dynamic_preprocessing",
         "tests/test_revised_implementation.py:15: import data_provider.dynamic_preprocessing",
         "data_provider/file_loader.py:10: import data_provider.dynamic_preprocessing",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -381,17 +381,17 @@
         "scripts/export_final_tte_per_sample.py:510: import data_provider.tte_dataset",
         "scripts/verify_tte_dataset.py:9: import data_provider.tte_dataset",
         "tests/test_canonical_runtime_regressions.py:18: import data_provider.tte_dataset",
-        "Verified source: phase4-reviewed-portable-source; path=data_provider/tte_dataset.py; SHA256=B91CCA4E07A6C1744925DD47DA053595E200056C0A7D89632A8FA57E01062E4C",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=data_provider/tte_dataset.py; SHA256=B91CCA4E07A6C1744925DD47DA053595E200056C0A7D89632A8FA57E01062E4C",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "C9DF61FF402D4E4995BD0D5CCC908F55FEDDFBBBDE828483C6340B51D2668C5C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
     },
     {
       "path": "docs/UPSTREAM_CHANGES.md",
-      "sha256": "999565F1D90786B0510C884924227524CAD37750651A9119B5F1D6C73D9A06EF",
+      "sha256": "1C4E86AFD2806BF8F404B26F9249FDBFC5C160174578D4C4A698FB362AC82A78",
       "publication_category": "DOCUMENTATION",
-      "role": "Original seven plus eighth portable adaptation, generated-source ownership and reused-body disposition",
+      "role": "Eight required BIGCity adaptations, their scientific purpose and generated-source distribution boundary",
       "required_by": [
         "nh_baseline",
         "nh_poi_tfidf",
@@ -402,33 +402,13 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
-    },
-    {
-      "path": "docs/comment_cleanup.md",
-      "publication_category": "DOCUMENTATION",
-      "role": "Publication/reproducibility documentation and declarative artifact/source contract",
-      "required_by": [
-        "nh_baseline",
-        "nh_poi_tfidf",
-        "nh_qwen_poi",
-        "tte_baseline",
-        "tte_structured",
-        "tte_qwen"
-      ],
-      "usage_status": "INFERRED",
-      "evidence": [
-        "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
-      ],
-      "sha256": "8034B8C06211CD88600CEC14F68CDBDE184F3D7B7FA3FC354F3D27D3B8AE8CFD",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
     },
     {
       "path": "docs/file_selection.md",
       "publication_category": "DOCUMENTATION",
-      "role": "Publication/reproducibility documentation and declarative artifact/source contract",
+      "role": "Concise source/component inventory and explanation of external and historical source metadata",
       "required_by": [
         "nh_baseline",
         "nh_poi_tfidf",
@@ -440,14 +420,14 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "9FD0AA6943B2940866812E81B606DB07B3803A9C41C91F320BC39454D45D4EB3",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "F9D035664431B86F037EA1F5275858E1EF2128FCCE748FF9071ABEC50B4922F8",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "docs/installation.md",
-      "sha256": "29856772FBA0C76D2D878212056523BA5B0DCBEA02B16B1A84CB118610FCFE60",
+      "sha256": "8C6CA7645C696D9590BDBED3F584B3FF263975C16DAEAA78B89E7783C479C553",
       "publication_category": "DOCUMENTATION",
       "role": "Actual source acquisition/integration/verification CLI and separate observed environments",
       "required_by": [
@@ -455,7 +435,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -473,14 +453,14 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "D37B3521F5D7F4BBFA813E105F96E2FD157C15D0ED1DC772ECC3034D32B8971D",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "94995864306B334534CA342A54335F5EBE83459EE1151997B58313B9DDB302C5",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "docs/reproduction.md",
-      "sha256": "124FC0E64B83A3F1A89FDC0B70383F592E19AE83A2A33FD6428D5DA16FBDA006",
+      "sha256": "815E4C06E95B357C3E154F9580FF043D4DC069D6B6273F1226C778F77C8F2F7E",
       "publication_category": "DOCUMENTATION",
       "role": "Complete canonical preprocessing, external assets, fresh/historical training/evaluation workflow",
       "required_by": [
@@ -488,7 +468,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -506,10 +486,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "332D117CE5A586B7A7A0A3D3363195310AB2C00EC8ECC69280480350CBB082A2",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "900753C0D7C98CE62DF79BDF5A39B60E3E53304743F346830A49EE13148B5D8A",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "docs/workflow.md",
@@ -526,10 +506,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "0BB2ED652482A09E851B6F74FA5F6BBC3A78117E0CDCA13C60E8702F30EF196C",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "3F7E5EA00559513046AD1B860F2D0391DBB4E0B11851BFA3276A76B978ED9A2E",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "environments/analysis.txt",
@@ -545,8 +525,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=environments/analysis.txt; SHA256=E36D2D556AA95CD336DDCC02A61E806A9A36437D75138E6C5A7FAF741B567E8E",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=environments/analysis.txt; SHA256=E36D2D556AA95CD336DDCC02A61E806A9A36437D75138E6C5A7FAF741B567E8E",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E36D2D556AA95CD336DDCC02A61E806A9A36437D75138E6C5A7FAF741B567E8E",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -565,8 +545,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=environments/bigcity.txt; SHA256=24CD257426D2079C40C4875853D14D53BC15EE8EA0D54A193747591F213C3C7C",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=environments/bigcity.txt; SHA256=24CD257426D2079C40C4875853D14D53BC15EE8EA0D54A193747591F213C3C7C",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "24CD257426D2079C40C4875853D14D53BC15EE8EA0D54A193747591F213C3C7C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -585,8 +565,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=environments/provenance.json; SHA256=09CE76B5AE458D945170E3EF2C2D2638A7E6E66F451ACA742BD3DBC4B2E105F7",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=environments/provenance.json; SHA256=09CE76B5AE458D945170E3EF2C2D2638A7E6E66F451ACA742BD3DBC4B2E105F7",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "09CE76B5AE458D945170E3EF2C2D2638A7E6E66F451ACA742BD3DBC4B2E105F7",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -605,8 +585,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=environments/qwen.txt; SHA256=B8E2470ADCD2AA9BBDF5C60C1F0A0A31340D16573A64C43F1365CBEBC2AD5E55",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=environments/qwen.txt; SHA256=B8E2470ADCD2AA9BBDF5C60C1F0A0A31340D16573A64C43F1365CBEBC2AD5E55",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "B8E2470ADCD2AA9BBDF5C60C1F0A0A31340D16573A64C43F1365CBEBC2AD5E55",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -620,8 +600,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/nh_baseline.json; SHA256=56262DE2867FA886A488A805060E592F7E4844DC18C94AA0DB0DC69D5569D117",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/nh_baseline.json; SHA256=56262DE2867FA886A488A805060E592F7E4844DC18C94AA0DB0DC69D5569D117",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "56262DE2867FA886A488A805060E592F7E4844DC18C94AA0DB0DC69D5569D117",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -635,8 +615,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/nh_poi_tfidf.json; SHA256=EF82A56041F36C2B4BB8E9E1582707E7491675C6BE53F70875F06B1DF48E8C05",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/nh_poi_tfidf.json; SHA256=EF82A56041F36C2B4BB8E9E1582707E7491675C6BE53F70875F06B1DF48E8C05",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "EF82A56041F36C2B4BB8E9E1582707E7491675C6BE53F70875F06B1DF48E8C05",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -650,8 +630,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/nh_qwen_poi.json; SHA256=9090A3313D47DD46A996809B6BC3B9023059BDE280CA3790B206ED5CDADFF9F1",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/nh_qwen_poi.json; SHA256=9090A3313D47DD46A996809B6BC3B9023059BDE280CA3790B206ED5CDADFF9F1",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "9090A3313D47DD46A996809B6BC3B9023059BDE280CA3790B206ED5CDADFF9F1",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -665,8 +645,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/tte_baseline.json; SHA256=649A6685D829D6ED6BCB372E97528704993DCD40B5A50D00BFE916225C2CDC91",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/tte_baseline.json; SHA256=649A6685D829D6ED6BCB372E97528704993DCD40B5A50D00BFE916225C2CDC91",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "649A6685D829D6ED6BCB372E97528704993DCD40B5A50D00BFE916225C2CDC91",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -680,8 +660,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/tte_qwen.json; SHA256=817518D88B66151B1A3F51BE35E6AA3B843BC2CAFC6AC9EE1BABA60FCD08797F",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/tte_qwen.json; SHA256=817518D88B66151B1A3F51BE35E6AA3B843BC2CAFC6AC9EE1BABA60FCD08797F",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "817518D88B66151B1A3F51BE35E6AA3B843BC2CAFC6AC9EE1BABA60FCD08797F",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -695,8 +675,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=experiments/tte_structured.json; SHA256=5DE4D253D69C07955354551B906509CA79F01CB6E9E3182CD28A32F38390D48A",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=experiments/tte_structured.json; SHA256=5DE4D253D69C07955354551B906509CA79F01CB6E9E3182CD28A32F38390D48A",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "5DE4D253D69C07955354551B906509CA79F01CB6E9E3182CD28A32F38390D48A",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -717,13 +697,13 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Newly authored, not copied upstream.",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
     {
       "path": "models/bigcity4tte.py",
-      "sha256": "ECE406DFBA8D5751990C9119406E4A830DAEB3AEEB1DDC0B079C69CD51A3202E",
+      "sha256": "53DE961A9BE8BA9307370A716670BF5D98AA4F3EBE1B9541A04E56B32E31E17D",
       "publication_category": "ORIGINAL_REVIEWED",
       "role": "Original TTE head, masked attention, semantic gating, REG packing and duration/loss path",
       "required_by": [
@@ -733,12 +713,12 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Five canonical methods preserved; only genuinely mirrored tokenize_tte is delegated to an explicit private adapter.",
+        "Canonical TTE task methods are preserved. TTETokenizationAdapter reuses the locally integrated upstream tokenizer with PAD-masked attention.",
         "train_tte.py:18: import models.bigcity4tte",
         "scripts/export_final_tte_per_sample.py:416: import models.bigcity4tte",
         "tests/test_canonical_runtime_regressions.py:21: import models.bigcity4tte",
         "tests/test_revised_implementation.py:13: import models.bigcity4tte",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -760,7 +740,7 @@
         "Exact new thesis functions extracted from modified FineTune; upstream class/prompt/task implementation is not copied.",
         "tests/test_revised_implementation.py:14: import models.thesis_semantics",
         "models/bigcity4finetune.py:1: import models.thesis_semantics",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -774,12 +754,12 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
       "path": "reproducibility/dependency_chains.json",
-      "sha256": "3D7F8C43F415DB2558C810A4BE8748A07AE478544920491DE58BC49CFA5AA652",
+      "sha256": "D8758880BDDA9B876EE50034A12316832E33173F611C3341FF20CDAE87E7DF76",
       "publication_category": "DOCUMENTATION",
       "role": "Revised source integration and upstream-change provenance contract",
       "required_by": [
@@ -792,8 +772,8 @@
       ],
       "usage_status": "INFERRED",
       "evidence": [
-        "Revised PHASE5 publication/integration requirement",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Six canonical preprocessing, runtime and analysis chains recorded in this manifest",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ]
     },
     {
@@ -810,10 +790,10 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=reproducibility/external_artifacts.json; SHA256=6E7ADDB96DE493FF5BE9378C5E50E1ED238EF051FD0B378C84F14676B7C825BD",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=reproducibility/external_artifacts.json; SHA256=6E7ADDB96DE493FF5BE9378C5E50E1ED238EF051FD0B378C84F14676B7C825BD",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "AA71BFA85BE21894E0E34C5F91DE6E62840DD928AAC12260585B3C2030EFEBC7",
+      "sha256": "6F19ADB0E03C3E1E53F77130AF7FD0732F3E7FEC085041FF210D0E822333FB7E",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
     },
     {
@@ -830,14 +810,14 @@
       ],
       "usage_status": "INFERRED",
       "evidence": [
-        "Phase5 explicit file-selection requirement"
+        "scripts.verify_public_candidate consumes the exact inventory and external dependency classification"
       ],
       "sha256": null,
       "hash_note": "Self-reference excluded from content hashing; all other files are hash checked"
     },
     {
       "path": "reproducibility/integration_inputs.json",
-      "sha256": "73EE7426631236C4B6DBE8BFC827B4BE3819146B8E9AE9EFD81E47AE03C66D0E",
+      "sha256": "D0AA5436A3B5BAF655D4E497F2421879008BF1B1153EE3E580ADCFB1040A961F",
       "publication_category": "DOCUMENTATION",
       "role": "Pinned 13 upstream preimages/eight derived fingerprints plus 73 authored runtime/support source hashes",
       "required_by": [
@@ -845,7 +825,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -863,14 +843,14 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: generated-declarative-metadata; path=None; SHA256=None",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "732562EE2F5FCB17521444C85BF6F1FAB3A24D9B5EA185ABD196B8790CBF508D",
+      "sha256": "14450159AA1309E0340F2DDEEC5B018864504272C13C43B3BFA82F9224C53734",
       "provenance_review": "CLI names/types/defaults and canonical choices extracted by AST; contains no parser function source."
     },
     {
       "path": "reproducibility/source_equivalence.json",
-      "sha256": "1C509F9F2E0E8E5A052E1CBE579B302E6112E4D3CF8F8DE05E9414AFFBB1C776",
+      "sha256": "8A95C3E88BE5BD5D58693BF02E37B35490494F4AB6F0B1F10AA572351A008AC0",
       "publication_category": "DOCUMENTATION",
       "role": "Sixteen independent canonical source/AST comparisons, with explicit specialization and real-weight limits",
       "required_by": [
@@ -878,13 +858,13 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
       "path": "reproducibility/standalone_runtime_plan.json",
       "publication_category": "DOCUMENTATION",
-      "role": "Publication/reproducibility documentation and declarative artifact/source contract",
+      "role": "Hash-locked historical source snapshot for optional reference tests; not an integration source provider",
       "required_by": [
         "nh_baseline",
         "nh_poi_tfidf",
@@ -895,11 +875,11 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-hash-only-plan; path=reproducibility/standalone_runtime_plan.json; SHA256=F07FF0701FC57F4C94AC06DE79ECEAB25B055DBD0327B9AEDA1E8B194E68B5F8",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-source-snapshot-plan; path=reproducibility/standalone_runtime_plan.json; SHA256=F07FF0701FC57F4C94AC06DE79ECEAB25B055DBD0327B9AEDA1E8B194E68B5F8",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
-      "sha256": "BBCEADDC3E8021C4F8EF86D4DEA4607B18BC073B2A0CFA9ACC37D3452B879299",
-      "provenance_review": "Hashes/providers only; the historical private bundle is not included and is never silently replaced by candidate copies."
+      "sha256": "387188383451EF09830D8859954A7DC59DC9FB42834CA6F659AB147EEEEF6D48",
+      "provenance_review": "Historical source-snapshot hashes for optional reference tests; not an integration input"
     },
     {
       "path": "results/canonical_metrics.json",
@@ -916,10 +896,10 @@
       "usage_status": "INFERRED",
       "evidence": [
         "Current publication requirement: exact inventory, independently executable tests, scientific result reporting or reproducibility documentation; not a claim of historical execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "1D73DF874D5D03C91BBAC01126F485C9115C99B959417CB9762502C56BDA23CE",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "results/next_hop/next_hop_model_metrics.csv",
@@ -933,7 +913,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-aggregate-output; path=final_analysis/next_hop/statistics/next_hop_model_metrics.csv; SHA256=12AE0FBF6CA069B5532A28880BC8411BBFA4D362684AC93291C7E95C4A227B89",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "12AE0FBF6CA069B5532A28880BC8411BBFA4D362684AC93291C7E95C4A227B89",
       "provenance_review": "Small aggregate table; no per-sample trajectory or prediction records."
@@ -950,7 +930,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-aggregate-output; path=final_analysis/next_hop/statistics/next_hop_pairwise_statistics.csv; SHA256=CE8A3FB49087EC98A2D1EAB64E4EBFF611D57D14E426084EFE1DBA5C3293FD36",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "CE8A3FB49087EC98A2D1EAB64E4EBFF611D57D14E426084EFE1DBA5C3293FD36",
       "provenance_review": "Small aggregate table; no per-sample trajectory or prediction records."
@@ -967,7 +947,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-aggregate-output; path=final_analysis/tte/statistics/tte_model_error_statistics.csv; SHA256=FE35DB4C6B1ED21BF47320C5FBC7D1C129EABEC8C8690327DA2C780D6C50877D",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "FE35DB4C6B1ED21BF47320C5FBC7D1C129EABEC8C8690327DA2C780D6C50877D",
       "provenance_review": "Small aggregate table; no per-sample trajectory or prediction records."
@@ -984,7 +964,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: canonical-aggregate-output; path=final_analysis/tte/statistics/tte_pairwise_statistics.csv; SHA256=6EA7B90F8FA6F35E80EC9BC94704E321C8638B7C47CAA2FF764E9A554ECB1FF9",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "6EA7B90F8FA6F35E80EC9BC94704E321C8638B7C47CAA2FF764E9A554ECB1FF9",
       "provenance_review": "Small aggregate table; no per-sample trajectory or prediction records."
@@ -1007,8 +987,8 @@
         "tests/test_build_tte_structured_semantic_cache.py:13: import scripts",
         "tests/test_experiment_configs.py:11: import scripts",
         "tests/test_portable_runtime_support.py:8: import scripts",
-        "Verified source: phase4-reviewed-portable-source; path=scripts/__init__.py; SHA256=E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/__init__.py; SHA256=E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1024,8 +1004,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/analyze_final_next_hop_statistics.py; SHA256=27F09EF3362FCBFA5C46BE25151FC0CAB3B2778A5B74961B417A2646E8C4F8D9",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/analyze_final_next_hop_statistics.py; SHA256=27F09EF3362FCBFA5C46BE25151FC0CAB3B2778A5B74961B417A2646E8C4F8D9",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "5218133B3716B52D6A18CAB6247ED4B78526311C55070AF8900C2CD0827D1B60",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1041,8 +1021,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/analyze_final_next_hop_stratified.py; SHA256=614A35C0EBF93F13B67613C8058423AF33E96920851D2E68839FCF2334490EC7",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/analyze_final_next_hop_stratified.py; SHA256=614A35C0EBF93F13B67613C8058423AF33E96920851D2E68839FCF2334490EC7",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "ABB6EA09E757056D865E0E46E6EF59CD3A3FA6A1D8AE44BE713933A95E5D5706",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1058,8 +1038,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/analyze_final_tte_statistics.py; SHA256=67A06D852DC07CECAFA2A9BB5858B97AA1124CD5F12695205E75959881E95026",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/analyze_final_tte_statistics.py; SHA256=67A06D852DC07CECAFA2A9BB5858B97AA1124CD5F12695205E75959881E95026",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "67A06D852DC07CECAFA2A9BB5858B97AA1124CD5F12695205E75959881E95026",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1075,8 +1055,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/analyze_final_tte_stratified.py; SHA256=A8EC8676F53BB733286DFE63E7D42E7DEA22BF87D5CB0D3E2459D2350DC68ED4",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/analyze_final_tte_stratified.py; SHA256=A8EC8676F53BB733286DFE63E7D42E7DEA22BF87D5CB0D3E2459D2350DC68ED4",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "A8EC8676F53BB733286DFE63E7D42E7DEA22BF87D5CB0D3E2459D2350DC68ED4",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1098,7 +1078,7 @@
       "evidence": [
         "Content/schema operations reviewed; canonical controlled branch preserved; original-mode branch removed.",
         "tests/test_build_dynamic_cache.py:6: import scripts.build_dynamic_cache",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -1116,9 +1096,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_full_metadata.py; SHA256=53567F3CE68686612971B2D327ECDF65F3B048DED4F0625EBB7000AB984B3E8C",
+        "Verified source: historical-portable-source; path=scripts/build_full_metadata.py; SHA256=53567F3CE68686612971B2D327ECDF65F3B048DED4F0625EBB7000AB984B3E8C",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "53567F3CE68686612971B2D327ECDF65F3B048DED4F0625EBB7000AB984B3E8C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1132,9 +1112,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_language_road_semantic_cache.py; SHA256=8A1E8DB487513EF676EEBF173E0ACC27A1AD4AFD2C789F6D4B41BF33E8C21A4E",
+        "Verified source: historical-portable-source; path=scripts/build_language_road_semantic_cache.py; SHA256=8A1E8DB487513EF676EEBF173E0ACC27A1AD4AFD2C789F6D4B41BF33E8C21A4E",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "C5070485662224BB7A3A1BC043333F71D0E001958B0F5C4AE848E83ACD8390BB",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1148,9 +1128,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_language_semantic_cache.py; SHA256=2388E6E5CE8086BEE73783AB60472D2800EE21ECC53E38A90B9479432AEAF33C",
+        "Verified source: historical-portable-source; path=scripts/build_language_semantic_cache.py; SHA256=2388E6E5CE8086BEE73783AB60472D2800EE21ECC53E38A90B9479432AEAF33C",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E2F3A65981FED892F4154EC2DD913620575389CD1F05F3DE1E562DBAD772D9AF",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1167,9 +1147,9 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "tests/test_build_next_hop_cache.py:17: import scripts.build_next_hop_cache",
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_next_hop_cache.py; SHA256=1B90CBE6BA5F2B7969B31499180F6E936C7587FE10C03FCB1A0CD3DFD4F2FB8F",
+        "Verified source: historical-portable-source; path=scripts/build_next_hop_cache.py; SHA256=1B90CBE6BA5F2B7969B31499180F6E936C7587FE10C03FCB1A0CD3DFD4F2FB8F",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "6E03A69E246E267738FEC35ADE5CC465B33F6AB5A88D9BB3EB35FE95F74EBECF",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1184,9 +1164,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_semantic_cache.py; SHA256=5A0B7510F96D3A63AD5880CA26F489D9E99C4F101A38C70ABE7F8F64AD438854",
+        "Verified source: historical-portable-source; path=scripts/build_semantic_cache.py; SHA256=5A0B7510F96D3A63AD5880CA26F489D9E99C4F101A38C70ABE7F8F64AD438854",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "1C15C83630E2B4EB73743AFD1377CC314A2034E774C1B131DE186491C8239B2B",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1206,9 +1186,9 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "tests/test_build_structural_caches.py:11: import scripts.build_structural_caches",
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_structural_caches.py; SHA256=D18FC9BF13DF336D5402DBF4E888ABF912AF453CB303C26D95A38EC1278D376F",
+        "Verified source: historical-portable-source; path=scripts/build_structural_caches.py; SHA256=D18FC9BF13DF336D5402DBF4E888ABF912AF453CB303C26D95A38EC1278D376F",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "16D8B133003BBA9FBBF66AC24B8EE8DC05B889828AAAC32FD1F19E98B7C6C8EF",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1222,9 +1202,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_tte_qwen_semantic_cache.py; SHA256=37DDE4C3A6DF961B0FE0536489267AAF88B658B960D3E5255682A2F48F88CAC3",
+        "Verified source: historical-portable-source; path=scripts/build_tte_qwen_semantic_cache.py; SHA256=37DDE4C3A6DF961B0FE0536489267AAF88B658B960D3E5255682A2F48F88CAC3",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "37DDE4C3A6DF961B0FE0536489267AAF88B658B960D3E5255682A2F48F88CAC3",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1243,9 +1223,9 @@
         "scripts/build_tte_qwen_semantic_cache.py:136: import scripts.build_tte_structured_semantic_cache",
         "scripts/build_tte_qwen_semantic_cache.py:212: import scripts.build_tte_structured_semantic_cache",
         "scripts/export_final_tte_per_sample.py:566: import scripts.build_tte_structured_semantic_cache",
-        "Verified source: phase4-reviewed-portable-source; path=scripts/build_tte_structured_semantic_cache.py; SHA256=5BC1631C1FAB641C26931BA693869DDAFB96DF1893F692BB0DB2B1115BFA59AD",
+        "Verified source: historical-portable-source; path=scripts/build_tte_structured_semantic_cache.py; SHA256=5BC1631C1FAB641C26931BA693869DDAFB96DF1893F692BB0DB2B1115BFA59AD",
         "docs/workflow.md preprocessing dependency chain and actual builder entry point; artifact provenance in reproducibility/external_artifacts.json",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "376E266F356E965B06A8070BF16C4003736C8B76D744ADA34EC95A73819E238C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1261,8 +1241,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/export_final_next_hop_per_sample.py; SHA256=05650BB97A73082D288B2ACF12F8C60892E8475D781EB94B3480F2171F860DEF",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/export_final_next_hop_per_sample.py; SHA256=05650BB97A73082D288B2ACF12F8C60892E8475D781EB94B3480F2171F860DEF",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "05650BB97A73082D288B2ACF12F8C60892E8475D781EB94B3480F2171F860DEF",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1278,8 +1258,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/export_final_tte_per_sample.py; SHA256=4B891829002EB87B47ECBE9386D69622D30FF49AA77714701A64D7323CB35B1D",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/export_final_tte_per_sample.py; SHA256=4B891829002EB87B47ECBE9386D69622D30FF49AA77714701A64D7323CB35B1D",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "4B891829002EB87B47ECBE9386D69622D30FF49AA77714701A64D7323CB35B1D",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1295,8 +1275,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/plot_final_next_hop_figures_5_1_5_2.py; SHA256=6BCFE5C4CFC57994D96D2951D6E0474236AF80D0E10FA13DA3F248235AC32E3C",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/plot_final_next_hop_figures_5_1_5_2.py; SHA256=6BCFE5C4CFC57994D96D2951D6E0474236AF80D0E10FA13DA3F248235AC32E3C",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "6BCFE5C4CFC57994D96D2951D6E0474236AF80D0E10FA13DA3F248235AC32E3C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1312,8 +1292,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/plot_final_next_hop_figures_5_3_5_4.py; SHA256=DABA07C8CA2690D163DF274CA2EF32D3F7057C8425EE940F85D5D6AC6E94688C",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/plot_final_next_hop_figures_5_3_5_4.py; SHA256=DABA07C8CA2690D163DF274CA2EF32D3F7057C8425EE940F85D5D6AC6E94688C",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "DABA07C8CA2690D163DF274CA2EF32D3F7057C8425EE940F85D5D6AC6E94688C",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1329,8 +1309,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/plot_final_tte_figures.py; SHA256=CBFB0D206F680DF55700E02BD3B0B0F4844B15103CF63793DC5BF2534FB3897C",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/plot_final_tte_figures.py; SHA256=CBFB0D206F680DF55700E02BD3B0B0F4844B15103CF63793DC5BF2534FB3897C",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "D2F7339532DD4ABF4C8628D4C5DDB1B9E2937159576607EBD3833094E62A6AD7",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1361,8 +1341,8 @@
         "scripts/plot_final_tte_figures.py:447: import scripts.portable_runtime_support",
         "tests/test_portable_runtime_interfaces.py:65: import scripts.portable_runtime_support",
         "tests/test_portable_runtime_interfaces.py:137: import scripts.portable_runtime_support",
-        "Verified source: phase4-reviewed-portable-source; path=scripts/portable_runtime_support.py; SHA256=F9362EFB07E7E63BDA545CDDFFE0E60393AC75E65A531BA91FE6AB3A25C199BE",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/portable_runtime_support.py; SHA256=F9362EFB07E7E63BDA545CDDFFE0E60393AC75E65A531BA91FE6AB3A25C199BE",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "F9362EFB07E7E63BDA545CDDFFE0E60393AC75E65A531BA91FE6AB3A25C199BE",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1381,10 +1361,10 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ],
-      "sha256": "82FEF526C5A541796E5B96C2ADF8FD0EB149E6EAA5E3F11F03A54E703C82B806",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "AAA435B9461A3464033CA633E8C8F0CE4026996B6395C7FDCF8C1886F932A3DF",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "scripts/validate_experiment_configs.py",
@@ -1400,7 +1380,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ],
       "sha256": "76775FD543ACDB83FAD0770E227D865B64ADEC3EF5A36C30F64872DBB70545B0",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1419,10 +1399,10 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ],
-      "sha256": "8874B14C603F04B8466AC70251D03729675160D6010235999096734DD022DC19",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "sha256": "E5BCBB89FDB2FC5E341F6D7ADE73BE4F31A727C56C36EEF52B08C0B3A8AFB316",
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "scripts/verify_tte_dataset.py",
@@ -1435,8 +1415,8 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=scripts/verify_tte_dataset.py; SHA256=6C908B54F5E900DADE9D9F94F3E1FCA2DD4C1BAD04EE40EFB9D7063C9F53A71E",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=scripts/verify_tte_dataset.py; SHA256=6C908B54F5E900DADE9D9F94F3E1FCA2DD4C1BAD04EE40EFB9D7063C9F53A71E",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "6C908B54F5E900DADE9D9F94F3E1FCA2DD4C1BAD04EE40EFB9D7063C9F53A71E",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1451,12 +1431,12 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
       "path": "setup/integrate_bigcity.py",
-      "sha256": "FB2B0A789AA9A2852498AA30486A417A8B711D682BC65583C40E85A9EEA01292",
+      "sha256": "6632E381B9537AB45130F837C5F3726A311920C13BAFDAECF2FBBEF2EB49F86C",
       "publication_category": "ORIGINAL_REVIEWED",
       "role": "Standalone pinned-checkout validation, dry-run, eight source backups, transactional integration and read-only repeat verification",
       "required_by": [
@@ -1464,7 +1444,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -1477,7 +1457,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -1494,9 +1474,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_build_dynamic_cache.py; SHA256=B07C41AFEA91445BAA683D705B741731E0301020BC4468FE13BB8CA2B61BA82A",
+        "Verified source: historical-portable-source; path=tests/test_build_dynamic_cache.py; SHA256=B07C41AFEA91445BAA683D705B741731E0301020BC4468FE13BB8CA2B61BA82A",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "1CD88670EDE22B8C95D1A7EA3E20C718F794F16B3781A36EB0AF2005F91F8CA4",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1515,9 +1495,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_build_full_metadata.py; SHA256=96183E41B36A2FF3E54C638803A6141A2865FC5217FABE3720B6EC92D9C0B36D",
+        "Verified source: historical-portable-source; path=tests/test_build_full_metadata.py; SHA256=96183E41B36A2FF3E54C638803A6141A2865FC5217FABE3720B6EC92D9C0B36D",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "96183E41B36A2FF3E54C638803A6141A2865FC5217FABE3720B6EC92D9C0B36D",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1533,9 +1513,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_build_next_hop_cache.py; SHA256=8118A24BAA034DE257FEA9E4BBED351122CED5D85D09D93C2281BCFEDED07483",
+        "Verified source: historical-portable-source; path=tests/test_build_next_hop_cache.py; SHA256=8118A24BAA034DE257FEA9E4BBED351122CED5D85D09D93C2281BCFEDED07483",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "8118A24BAA034DE257FEA9E4BBED351122CED5D85D09D93C2281BCFEDED07483",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1554,9 +1534,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_build_structural_caches.py; SHA256=96B63848C00A7A26D9EE771D4A4365508836BD4D63FF269BD645990AD22AD645",
+        "Verified source: historical-portable-source; path=tests/test_build_structural_caches.py; SHA256=96B63848C00A7A26D9EE771D4A4365508836BD4D63FF269BD645990AD22AD645",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "96B63848C00A7A26D9EE771D4A4365508836BD4D63FF269BD645990AD22AD645",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1571,9 +1551,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_build_tte_structured_semantic_cache.py; SHA256=D66C3119D7496D288A27875331962691C3CC663048640E9C9A0841C25EC60F0B",
+        "Verified source: historical-portable-source; path=tests/test_build_tte_structured_semantic_cache.py; SHA256=D66C3119D7496D288A27875331962691C3CC663048640E9C9A0841C25EC60F0B",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "D66C3119D7496D288A27875331962691C3CC663048640E9C9A0841C25EC60F0B",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1589,9 +1569,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_cached_next_hop_dataset.py; SHA256=00A4000F311F491DD2C1061BF8C024D7C008E33FB7C5E86FB7982D044C022151",
+        "Verified source: historical-portable-source; path=tests/test_cached_next_hop_dataset.py; SHA256=00A4000F311F491DD2C1061BF8C024D7C008E33FB7C5E86FB7982D044C022151",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "00A4000F311F491DD2C1061BF8C024D7C008E33FB7C5E86FB7982D044C022151",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1610,9 +1590,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_canonical_runtime_regressions.py; SHA256=8823CAE6A1927C9E84012CC382CE5F759C22765E0CC91A529F5416DB411EC05B",
+        "Verified source: historical-portable-source; path=tests/test_canonical_runtime_regressions.py; SHA256=8823CAE6A1927C9E84012CC382CE5F759C22765E0CC91A529F5416DB411EC05B",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "DFF55D0538992E3EDCD3A8AFDDB90AABCD8899937D10548FF941FD1A79AF0B2B",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1632,7 +1612,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Canonical controlled cases retained; three legacy/original-mode cases excluded, with originals kept privately.",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E7B3BFFF7BD8DC45729379AC9DF1F50F9B0FD61BAFA1E83E8AADC216BFD71C46",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1651,9 +1631,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_experiment_configs.py; SHA256=3CE08663CB8226EC0182A5AE5A8AA4246C946B089E0BE5A7D888E44D9C57CADD",
+        "Verified source: historical-portable-source; path=tests/test_experiment_configs.py; SHA256=3CE08663CB8226EC0182A5AE5A8AA4246C946B089E0BE5A7D888E44D9C57CADD",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "3CE08663CB8226EC0182A5AE5A8AA4246C946B089E0BE5A7D888E44D9C57CADD",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1673,7 +1653,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Canonical controlled cases retained; three legacy/original-mode cases excluded, with originals kept privately.",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "2142E12CCBEB44DBE6B3CBFD756320B2F87186711CD4F3F10F2B5532A228F0C1",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1688,7 +1668,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -1702,9 +1682,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_next_hop_metrics.py; SHA256=E6E568DFD6D69AA9A736E2BACAF21A9504917BABF36024A63BBF71DBC044DDC9",
+        "Verified source: historical-portable-source; path=tests/test_next_hop_metrics.py; SHA256=E6E568DFD6D69AA9A736E2BACAF21A9504917BABF36024A63BBF71DBC044DDC9",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E6E568DFD6D69AA9A736E2BACAF21A9504917BABF36024A63BBF71DBC044DDC9",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1723,9 +1703,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_portable_runtime_interfaces.py; SHA256=C4507DD40C8155717913E77E0BA9C5F3439C4E37BB2A761B6B2D2826CA6D6036",
+        "Verified source: historical-portable-source; path=tests/test_portable_runtime_interfaces.py; SHA256=C4507DD40C8155717913E77E0BA9C5F3439C4E37BB2A761B6B2D2826CA6D6036",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "C4507DD40C8155717913E77E0BA9C5F3439C4E37BB2A761B6B2D2826CA6D6036",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1744,9 +1724,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_portable_runtime_support.py; SHA256=E3DFB95120DEF1A4EAB33D696E09F98EED35E18E4F328CA3A850BF5C2F41202B",
+        "Verified source: historical-portable-source; path=tests/test_portable_runtime_support.py; SHA256=E3DFB95120DEF1A4EAB33D696E09F98EED35E18E4F328CA3A850BF5C2F41202B",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "E3DFB95120DEF1A4EAB33D696E09F98EED35E18E4F328CA3A850BF5C2F41202B",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1766,10 +1746,10 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "716D5609EA1998AC1EAF4BE994B978A1D7AC845FE24BA1371C0888F9287E5096",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "tests/test_revised_implementation.py",
@@ -1787,7 +1767,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Four CPU tests selected by test driver; no real model forward or weights.",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -1802,9 +1782,9 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "Verified source: phase4-reviewed-portable-source; path=tests/test_train_next_hop.py; SHA256=56E233E58BA4E02EF03F03A7648639F3893AC494D46C7EF9DDCA4DC9AE1527F4",
+        "Verified source: historical-portable-source; path=tests/test_train_next_hop.py; SHA256=56E233E58BA4E02EF03F03A7648639F3893AC494D46C7EF9DDCA4DC9AE1527F4",
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "56E233E58BA4E02EF03F03A7648639F3893AC494D46C7EF9DDCA4DC9AE1527F4",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1821,10 +1801,10 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "scripts/run_selected_tests.py:GROUPS selects this exact test; synthetic verification, not evidence of historical training execution",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "481DB0C7F8FC352053D259B44FD8F53E0A88367107678F283DB6299502AA17F7",
-      "provenance_review": "New Phase5 independent tooling/documentation; proposed publication role, no claim of historical use"
+      "provenance_review": "Reproduction tooling/documentation added after the canonical training runs; not evidence of execution during those runs"
     },
     {
       "path": "tests/test_tte_tokenizer_hook.py",
@@ -1836,7 +1816,7 @@
       ],
       "usage_status": "CONFIRMED",
       "evidence": [
-        "PHASE6 actual source definitions, integration manifest and focused synthetic/static verification"
+        "Source definitions, integration manifest and focused synthetic/static verification"
       ]
     },
     {
@@ -1855,7 +1835,7 @@
         "train_tte.py:20: import train_next_hop",
         "scripts/export_final_next_hop_per_sample.py:317: import train_next_hop",
         "tests/test_train_next_hop.py:13: import train_next_hop",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -1874,7 +1854,7 @@
         "Original task-specific orchestration; seed API idiom is not treated as copied program implementation.",
         "scripts/export_final_tte_per_sample.py:417: import train_tte",
         "tests/test_canonical_runtime_regressions.py:23: import train_tte",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "provenance_review": "Content reviewed against pinned upstream and canonical function bodies; imports/inheritance alone are not derivation evidence. No legal certification."
     },
@@ -1893,7 +1873,7 @@
       "usage_status": "CONFIRMED",
       "evidence": [
         "Verified source: new-package-marker; path=None; SHA256=None",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "81ED94EEE1640BC01539ECD1393A2E34917635815947465E5B13B933CCB53574",
       "provenance_review": "New documentation-only package marker, independently authored; not copied from the upstream package initializer."
@@ -1912,8 +1892,8 @@
         "train_next_hop.py:26: import utils.next_hop_metrics",
         "scripts/export_final_next_hop_per_sample.py:321: import utils.next_hop_metrics",
         "tests/test_next_hop_metrics.py:6: import utils.next_hop_metrics",
-        "Verified source: phase4-reviewed-portable-source; path=utils/next_hop_metrics.py; SHA256=7C4D118CB4774153C5E6890B45C7F4DDF47556715E49A6D0627C41FCB2E2F84A",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=utils/next_hop_metrics.py; SHA256=7C4D118CB4774153C5E6890B45C7F4DDF47556715E49A6D0627C41FCB2E2F84A",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "7C4D118CB4774153C5E6890B45C7F4DDF47556715E49A6D0627C41FCB2E2F84A",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -1931,8 +1911,8 @@
       "evidence": [
         "train_tte.py:31: import utils.tte_metrics",
         "tests/test_canonical_runtime_regressions.py:24: import utils.tte_metrics",
-        "Verified source: phase4-reviewed-portable-source; path=utils/tte_metrics.py; SHA256=8DA5C5EE7E44C202C31B25A7F3C38D100EAE324F77E85E7D9635021FAB061E1A",
-        "PHASE6 integration source inventory and selected synthetic/static verification; no real training claimed"
+        "Verified source: historical-portable-source; path=utils/tte_metrics.py; SHA256=8DA5C5EE7E44C202C31B25A7F3C38D100EAE324F77E85E7D9635021FAB061E1A",
+        "Source inventory and selected synthetic/static verification; historical execution is documented separately"
       ],
       "sha256": "1D0EA49BA2CEBB037294E1FD6FA2B76777770582762459F192F3572B733B2E75",
       "provenance_review": "New source path at the pinned upstream revision; independent orchestration/validation/semantic/metric logic reviewed. External API dependencies are recorded separately; no legal certification is implied."
@@ -2562,7 +2542,7 @@
     {
       "path": "scripts/assemble_standalone_runtime.py",
       "classification": "EXCLUDED",
-      "reason": "Obsolete private-bundle assembly/control tests replaced by the source-only PHASE6 integrator"
+      "reason": "Superseded integration tooling/control tests replaced by source-only integration"
     },
     {
       "path": "scripts/audit_historical_osm_tte_coverage.py",
@@ -2722,7 +2702,7 @@
     {
       "path": "tests/test_standalone_runtime.py",
       "classification": "EXCLUDED",
-      "reason": "Obsolete private-bundle assembly/control tests replaced by the source-only PHASE6 integrator"
+      "reason": "Superseded integration tooling/control tests replaced by source-only integration"
     },
     {
       "path": "utils/__init__.py",
@@ -2782,11 +2762,11 @@
   ],
   "excluded_untracked_or_generated_policy": [
     "Any path not explicitly listed in included",
-    "All .phase*-staging directories and private backup/bundle payloads",
+    "Temporary staging directories, source backups and private artifacts",
     "Datasets, raw trajectories, per-sample CSVs, checkpoints, semantic/dynamic/support caches",
     "BGE, ablations, exploratory/legacy runners and unrelated tests",
     "Original BIGCity README/assets/source implementations"
   ],
-  "included_count": 101,
+  "included_count": 100,
   "excluded_tracked_count": 149
 }

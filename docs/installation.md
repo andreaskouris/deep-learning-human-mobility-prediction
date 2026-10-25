@@ -3,7 +3,7 @@
 Use Python **3.12**. The fingerprinted AST profile was verified with 3.12.10 on
 Windows; a clean installation and other platforms have not been tested.
 The thesis repository contains the implementation and transformations, not BIGCity
-source, datasets, weights, generated caches or a private replacement bundle.
+source, datasets, weights or generated caches.
 
 ## Thesis checkout byte policy
 
@@ -16,8 +16,7 @@ source inventory; all declared source files remain strictly fingerprinted.
 
 ## Obtain official BIGCity separately
 
-These are acquisition commands for later use. No network acquisition was needed
-in PHASE6 because the pinned official source was already available.
+Obtain the pinned source in a separate directory:
 
 ```sh
 git -c core.autocrlf=false clone --filter=blob:none --no-checkout https://github.com/bigscity/BIGCity.git "$BIGCITY_ROOT"
@@ -79,8 +78,8 @@ All eight transformations operate on the user's verified source AST. The
 FineTune prompt functions are derived from that source, not embedded replacements.
 Original thesis checkpoint/semantic processing is called through the published
 mixin. TTE uses the corrected upstream tokenizer with an independent attention
-hook; no copied private TTE tokenizer body or legacy original-mode processor is
-needed. Only controlled dynamic mode/static-ablation none are supported.
+hook supplied in this repository. Only controlled dynamic mode and
+`static_ablation=none` are supported.
 
 ## Validate source and selected contracts
 
@@ -96,13 +95,12 @@ python -B -m scripts.run_selected_tests --group runtime --runtime-root "$ADAPTED
 Use the BIGCity tensor environment for science/runtime groups. Runtime tests block
 real model forward/GPU/network/optimizer calls and use small synthetic caches.
 The optional `reference` group also needs an explicit hash-locked historical
-source reference. It was used for preparation-time comparisons; it is not required
-by integration, preprocessing, training or fresh evaluation. It is not a hidden
-source provider.
+source reference. It is not required by integration, preprocessing, training or
+fresh evaluation. See [verification.md](verification.md) for tested scope.
 
-Generated runtime/backup files include protected upstream material and must remain
-local while redistribution rights are unresolved. Public source integration has
-been tested; real-weight training/evaluation and clean installation have not.
+Keep generated runtime/backups local while upstream redistribution rights remain
+unresolved; see [LICENSE_STATUS.md](../LICENSE_STATUS.md). Source integration has
+been tested; real-weight reproduction and clean installation have not.
 
 `ADAPTED_ROOT/dataset` is an allowed external-data sidecar. It is not traversed or
 hashed by source verification; data integrity is checked by the artifact manifest

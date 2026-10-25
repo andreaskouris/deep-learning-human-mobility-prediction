@@ -36,7 +36,7 @@ if group not in ('runtime','reference'):
         def find_spec(self,fullname,path=None,target=None):
             denied={'train_next_hop','train_tte','data_provider.file_loader','data_provider.data_loader','data_provider.original_dynamic_preprocessing','utils.timefeatures'}
             if fullname in denied or fullname=='config' or fullname.startswith('config.') or fullname=='models' or fullname.startswith('models.'):
-                raise ImportError('Withheld runtime dependency requires explicit private source: '+fullname)
+                raise ImportError('Runtime dependency requires the explicitly integrated BIGCity source: '+fullname)
     sys.meta_path.insert(0,PublicBoundary())
 if group!='tooling':
     import torch

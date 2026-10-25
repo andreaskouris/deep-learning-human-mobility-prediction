@@ -6,8 +6,8 @@ The intended workflow is:
 prepare external XA data/caches → train/evaluate the six configurations.**
 
 Read [installation.md](installation.md) first. Source integration was executed and
-verified. Training, Qwen generation and full-test evaluation below are documented
-interfaces, not experiments executed in this preparation phase.
+verified. The model-dependent commands below describe the reproduction workflow;
+fresh training, Qwen generation and full-test re-evaluation have not been tested.
 
 ## Inputs
 
@@ -73,9 +73,8 @@ unbound scratch basename. NH prototypes use
 A standalone builder's custom output does not automatically rebind a runner.
 
 Exact semantic CLI recipes and their output safeguards are retained in
-[workflow.md](workflow.md). They are available code paths; no Qwen encoding was
-performed in this phase. NH Qwen snapshot provenance is pinned; historical TTE
-Qwen revision remains unconfirmed. Tensor-level structured-cache identity is
+[workflow.md](workflow.md). NH Qwen snapshot provenance is pinned; the historical
+TTE Qwen revision remains unconfirmed. Tensor-level structured-cache identity is
 separate from whole `.pth` serialization bytes.
 
 ## Train and selected-checkpoint evaluation
@@ -91,7 +90,7 @@ python -B -m scripts.portable_runtime_support \
 
 Repeat for the other five JSONs. This command only prints arguments. Separately
 execute the printed runner argv from the integrated runtime when you intend real
-training. No runner was executed for even one training batch here.
+training.
 
 All six retain seed 2021, batch 32, LR 0.0002, weight decay 0, maximum 20 epochs,
 patience 3, controlled dynamic mode and static ablation none. NH selects strict
@@ -101,16 +100,17 @@ clipped before MAE/RMSE/MAPE. NH keeps its original loss and top-5 metric defini
 
 The runners reload the selected checkpoint before final test evaluation. Historical
 and fresh per-sample exporters, manifest schema, paired statistics and plotting
-commands are documented in [workflow.md](workflow.md). Those commands perform real
-model evaluation or process external prediction CSVs; they were not run over the
-full test set in PHASE6. The README figures/results are the archived final outputs.
+commands are documented in [workflow.md](workflow.md). They evaluate selected
+checkpoints or process external prediction CSVs. The README figures and results
+are the final thesis outputs.
 
-## What this does and does not establish
+## Reproduction limits
 
 All required authored preprocessing/task code is included. Generated source imports,
 configurations, source fingerprints and selected synthetic contracts pass. The TTE
 hook matches canonical tokens/gradients on small CPU fixtures; real-weight/GPU
 numerical equivalence, fresh convergence, cross-platform and clean installation
-remain NOT TESTED. Historical source-reference comparisons are optional forensic
-verification, not an installation dependency. Licensing of generated upstream-derived
-files remains unresolved; do not redistribute that output as an original thesis source.
+have not been tested. Historical source comparisons are optional and are not an
+installation dependency. See [reproducibility.md](reproducibility.md) for remaining
+provenance limits and [LICENSE_STATUS.md](../LICENSE_STATUS.md) for generated-source
+redistribution restrictions.

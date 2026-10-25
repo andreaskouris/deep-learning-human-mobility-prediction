@@ -448,6 +448,6 @@
       "sha256": "8DA5C5EE7E44C202C31B25A7F3C38D100EAE324F77E85E7D9635021FAB061E1A"
     }
   ],
-  "source_bundle_policy": "Explicit external filesystem bundle; no thesis Git object provider or fallback. Redistribution blocked pending rights.",
-  "scientific_baseline": "PHASE3 source identity preserved except reviewed portable paths, execution boundaries, output safety and reproduction profiles."
+  "source_bundle_policy": "Historical source-snapshot provenance for optional reference tests only. Source-provider labels describe the original snapshot assembly, not current integration requirements. Redistribution rights for its upstream-derived files remain unresolved.",
+  "scientific_baseline": "Historical portable implementation with reviewed path bindings, execution boundaries, output safeguards and historical/fresh reproduction profiles."
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Six canonical experiments only. Upstream/derived implementation, datasets, model weights and generated caches are not distributed.",
+  "scope": "External inputs for six canonical experiments. Data, weights and generated caches are not distributed. reviewed_source_file_sha256 identifies the historical research source; current distributed-byte hashes are in integration_inputs.json and file_selection.json.",
   "source_revisions": {
     "bigcity": {
       "url": "https://github.com/bigscity/BIGCity",
@@ -11,7 +11,7 @@
     },
     "thesis_research_head": "8bafa12f4c77ee3013ed7d1d69a20090bd69bfac",
     "phase1_builders_commit": "ad99e48a391ac27f32ed5bef1670fb614ace77c7",
-    "extension_delivery_status": "PHASE6: public source transformations and independent hooks derive all required canonical modules from the official pinned checkout; no private payload/history input. Generated upstream-derived output remains local."
+    "extension_delivery_status": "Source transformations and task-specific hooks derive the required runtime from the pinned official checkout. Generated upstream-derived source and backups remain local."
   },
   "placeholders": {
     "BIGCITY_ROOT": "Explicit separately assembled runtime; GPT-2 assets are bound with --gpt2_path by the portable command resolver.",
@@ -28,7 +28,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "D154AD2691A19C44303DC33E64EDA4A3817C667915D993BE9A06AAD3E0FB6CE7",
       "canonical_size_bytes": 1754637,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -45,7 +45,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "DCC0F0F693528953A907135199DA7B27397E76C9F9639A1D5B177A798F35345D",
       "canonical_size_bytes": 1165655,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -62,7 +62,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "C17F3796AE849EE16573D5DED3EB8C0DE5AF30F6C050CB4BC2D9FD2CFBE49BEC",
       "canonical_size_bytes": 182394,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -79,7 +79,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "145063C82CF1606ED14D91C0ACBECC71AE97B7345EB956A752B1074FAB1ED6E1",
       "canonical_size_bytes": 557289,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -96,7 +96,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "216946652825506CE7B7751CF6795ED1D7759484D2C9B115BD2FD434A3B1F28E",
       "canonical_size_bytes": 122827,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -113,7 +113,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "0A9037312B59DD311A61B20C95A28D447279DA3DBEEDEC77ADDE141C0343FACA",
       "canonical_size_bytes": 1279035,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -130,7 +130,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "FA6A8CB6154836368B1F938B13F0C8676F234F23F35291639E91FD4B6F7CBC52",
       "canonical_size_bytes": 429079,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -147,7 +147,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "0F1F85574B0B4C6BAD6605C2B130213774FD361CFFB2E7068661F0849582A6EB",
       "canonical_size_bytes": 160194246,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -164,7 +164,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "BFF3B4851F56ACACEA6E21591C25120368B9E6EE2FA3E8605E8C2358F85E9B77",
       "canonical_size_bytes": 873773164,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -181,7 +181,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "8EB480923E25A607A00FA2D03A07557CB8778748ABE8A5336FDB3A5A1E160705",
       "canonical_size_bytes": 95568773,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -198,7 +198,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "D3DF3121D2EA8CA18FD9C3A102712242BBA9F2963490C1A5FF683CF27473BCBA",
       "canonical_size_bytes": 32370297,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -215,7 +215,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "71F0BA280E9F4C40F7CBBE355930EA1A82AD45E11AFC2F31E6B2506440F47568",
       "canonical_size_bytes": 32088599,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -232,7 +232,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "CEAE086A96DB0439AB3662ACC30AD1973179E2DBDE30EAFC36C052561DC7658E",
       "canonical_size_bytes": 137,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "relation_cache",
@@ -259,7 +259,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "C2A64C90B80035A4FD363C9AFABD114CB967662879BD1A065D9005F92C0F1666",
       "canonical_size_bytes": 262170,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_rel"
@@ -274,7 +274,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "D10944963B06F398989EE956B35F23CA236D804664986CD077BE3E7BD80EAB9C",
       "canonical_size_bytes": 338505,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_static_features"
@@ -289,7 +289,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "6E543593BB044A1A8CB16BB65EFA012067AF0C050C42016CF69A88F042F412D3",
       "canonical_size_bytes": 61711976,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_dynamic"
@@ -304,7 +304,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "118DADD89F2A0CCF573078C01CDC09C41BF0865BA23F433709AC32775584D989",
       "canonical_size_bytes": 8610428,
-      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_evidence": "Historical final-results JSON; digest was not recomputed during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_poi",
@@ -330,7 +330,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "35AA4213FE0B7BBAD5685ECCA572CBB97B81DDFFD35897FD3B3233AD9750F7C6",
       "canonical_size_bytes": 844687,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_poi",
@@ -354,7 +354,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "33E071172E1BC7F14BFE7A6D8F268312A526677F8C3E7DC29C5C4B94A98D2E95",
       "canonical_size_bytes": 43173914,
-      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_evidence": "Historical final-results JSON; digest was not recomputed during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "poi_tfidf_cache",
@@ -378,7 +378,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "081952F5ABD0A5E005430113EACC7E516A76CF2210E8FF346039508982416717",
       "canonical_size_bytes": 212466,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_road",
@@ -429,7 +429,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "42916BE46167F41FB6DBDDEF3EBADFDC2D0F081FD365ABB0B0EE28870173D0C9",
       "canonical_size_bytes": 1412,
-      "hash_evidence": "PHASE1 protected-input digest; size and mtime_ns unchanged",
+      "hash_evidence": "Protected-input SHA256 verification; file size and modification time were unchanged",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "tte_structured_cache"
@@ -444,7 +444,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "31FA484DDB3FC9423F44C495E8A26366C4EBD21518124F28E33902EE06966DAF",
       "canonical_size_bytes": 21625512,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "tte_structured_cache",
@@ -471,7 +471,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "369EC1929072C27C3B97D283EA2473DEED694D1917793EF8C1C9D7920DFB5021",
       "canonical_size_bytes": 2042,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "tte_qwen_cache"
@@ -487,7 +487,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "01147799B0D09AF08A45B1053F33AE72D70F0E01FF14064F315FF799F32DA739",
       "canonical_size_bytes": 533542928,
-      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_evidence": "Historical final-results JSON; digest was not recomputed during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_train_trajectories",
@@ -503,7 +503,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "51C61F51BD68E8AD5270A0A5F68DA58500AA4CE6D7A8D385E195602BDB85959A",
       "canonical_size_bytes": 177848696,
-      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_evidence": "Historical final-results JSON; digest was not recomputed during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_validation_trajectories",
@@ -519,7 +519,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "FAFCBB6A7DB3BEC52A091744A8971E24EAD3790FE705A662875D30F2C5BD2F04",
       "canonical_size_bytes": 177848648,
-      "hash_evidence": "historical final-results JSON; not rehashed in PHASE2",
+      "hash_evidence": "Historical final-results JSON; digest was not recomputed during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_test_trajectories",
@@ -535,7 +535,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "B02559DA75BDD1AE62DCB12A17DE1457459DEA128846A20864F079D44004EFD6",
       "canonical_size_bytes": 552105649,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_train_trajectories",
@@ -551,7 +551,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "92937821CE885B61F645C8E76CAB6CBCB8F802124573B47260225066FE452DE2",
       "canonical_size_bytes": 184081064,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_validation_trajectories",
@@ -567,7 +567,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "72E4B427CC9EDD5F66ACFD8931E5A495583EA58265B62F5B0093AFA5058AA0DA",
       "canonical_size_bytes": 184080806,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "historical_serialized_identity; rebuilt equivalence requires schema/content/provenance validation",
       "depends_on": [
         "xa_test_trajectories",
@@ -583,7 +583,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "0DAED7749B4F02B8F76240D5444551D7B08712DAB4D0ADB8239C56BA823BB7B4",
       "canonical_size_bytes": 665,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -600,7 +600,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "1CE1664773C50F3E0CC8842619A93EDC4624525B728B188A9E0BE33B7726ADC5",
       "canonical_size_bytes": 456318,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -617,7 +617,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "7C5D3F4B8B76583B422FCB9189AD6C89D5D97A094541CE8932DCE3ECABDE1421",
       "canonical_size_bytes": 548118077,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -634,7 +634,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "8414CAB924D8B9B33013F0D221C5862F365EE9BE39C5C2BFAE8A5A9E970478A6",
       "canonical_size_bytes": 1355256,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -653,7 +653,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "5E04EB606E3A1583530A42E36C2A6B6615C86F34FE77E44D9DDEB43FF940931F",
       "canonical_size_bytes": 26,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -670,7 +670,7 @@
       "status": "CONFIRMED",
       "canonical_sha256": "196139668BE63F3B5D6574427317AE82F612A97C5D1CDAF36ED2256DBF636783",
       "canonical_size_bytes": 1042301,
-      "hash_evidence": "SHA256 streamed in PHASE2",
+      "hash_evidence": "SHA256 computed by streaming the artifact during the provenance audit",
       "hash_policy": "canonical_input_identity",
       "depends_on": [],
       "builder": null,
@@ -705,7 +705,7 @@
       "revision_status": "CONFIRMED",
       "revision_evidence": "scripts/build_language_semantic_cache.py:MODEL_REVISION and local HF refs/main; CONFIRMED for NH, INFERRED for historical TTE generation",
       "canonical_sha256": null,
-      "hash_policy": "pinned Hugging Face snapshot revision; per-file hashes not audited in PHASE2",
+      "hash_policy": "Pinned Hugging Face snapshot revision; individual snapshot files were not hashed during the provenance audit",
       "depends_on": []
     }
   ],
@@ -729,7 +729,7 @@
     "scripts/build_tte_qwen_semantic_cache.py": "C57FC1643ED8F6E5AB7CAC982F907F0B8906C43AF7269EC8EF605A921CCEBBCB"
   },
   "blockers": [
-    "Generated upstream-derived files/backups have unresolved public redistribution rights; source-only integration itself requires no private payload.",
+    "Generated upstream-derived files and backups have unresolved public redistribution rights; keep them local.",
     "XA source bytes are pinned by SHA256, but archive revision and original split-generation provenance remain unresolved.",
     "The historical TTE Qwen snapshot revision is unconfirmed; a fresh supplied model revision must be recorded separately.",
     "Structural and NH cache builder CLIs retain a ../dataset layout requirement; arbitrary dataset-root binding is not implemented there.",

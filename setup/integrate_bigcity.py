@@ -1,6 +1,6 @@
 """Derive a local canonical thesis runtime from an explicit pinned BIGCity checkout.
 
-Only the supplied checkout and this candidate are source providers. The original
+Only the supplied checkout and this repository are source providers. The original
 checkout is never changed; generated upstream-derived files must remain local.
 """
 from __future__ import annotations

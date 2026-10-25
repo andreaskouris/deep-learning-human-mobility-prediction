@@ -1,4 +1,4 @@
-"""Check candidate inventory, canonical interfaces and explicitly withheld imports."""
+"""Check repository inventory, canonical interfaces and external dependencies."""
 from __future__ import annotations
 
 import argparse

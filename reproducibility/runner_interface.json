@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Phase6 locally generated parser interface: canonical modes only; default controlled; historical experiment JSONs unchanged.",
+  "scope": "Locally integrated parser interface for canonical semantic modes, controlled dynamic preprocessing and unchanged scientific experiment settings.",
   "source_module_sha256": "85A945B91F1F643A8AEDBC77CDDA3C4DC89FFD7BEFFC12AA0832CB454315F6CE",
   "options": {
     "--task_name": {
@@ -112,5 +112,5 @@
       "default": "offline"
     }
   },
-  "actual_source_comparison_status": "VERIFIED_DURING_PHASE5; revalidation against supplied runtime is optional and explicit"
+  "actual_source_comparison_status": "VERIFIED_SOURCE_INTERFACE; validation against an explicitly supplied runtime is supported"
 }

@@ -1,14 +1,14 @@
 # Reproduction workflow
 
-Commands below document interfaces. They were not used to train models, encode
-Qwen embeddings or evaluate the full test set during repository preparation.
-Use new output locations and review source/data/model rights before execution.
+These commands cover preprocessing, selected-checkpoint evaluation and analysis
+for the six canonical experiments. Use new output locations and the separate
+environments described in [installation.md](installation.md).
 
 ## Integration prerequisite
 
 Use [installation.md](installation.md) to obtain the official pinned checkout and
-run `setup/integrate_bigcity.py`. All eight adaptations are generated locally;
-no private bundle or thesis Git objects are needed. Run model-dependent steps
+run `setup/integrate_bigcity.py`. All eight adaptations are generated locally.
+Run model-dependent steps
 from `ADAPTED_ROOT/runtime`, using external data/weights/assets. Only controlled
 dynamic mode and static ablation none are supported. Legacy modes are excluded.
 
@@ -38,8 +38,7 @@ Within the locally integrated runtime, the shared preprocessing order is:
 **Layout constraint:** the structural and NH builders do not accept arbitrary
 `--dataset-root` bindings. Their imported configuration still defaults to
 `../dataset` relative to the runtime working directory. Supply that layout
-explicitly in the integrated setup; do not pass an invented flag or assume a hidden
-research-archive fallback. This remains a portability limitation. Their canonical
+explicitly in the integrated setup. This remains a portability limitation. Their canonical
 seed is the shared parser default 2021; neither CLI exposes an independent seed flag.
 
 Use `--verify-only` where supported to validate existing caches. Do not use
@@ -92,7 +91,7 @@ python -B -m scripts.build_tte_qwen_semantic_cache \
 ```
 
 The displayed form stops before model loading/encoding. Actual generation would
-omit `--verify-source-only`; it has not been performed for this candidate. Supply
+omit `--verify-source-only`. Supply
 `--model-revision` only when known; historical TTE revision remains unconfirmed.
 Fresh source verification enforces the canonical tensor hash/schema/counts and
 source provenance. Historical mode retains the full original structured-file hash.
@@ -107,7 +106,7 @@ separately executing it in the integrated runtime.
 NH uses strict validation-accuracy improvement; TTE uses strict validation-MAE
 improvement. Both preserve patience 3 and at most 20 epochs. The included runner code
 loads the selected checkpoint before final test evaluation. New training is not
-required to reproduce source/static tests, and no training ran in PHASE6.
+required to run the source/static tests.
 
 Historical verification requires external access to the original six checkpoints.
 It retains the original SHA256 and result checks. Fresh export uses a manifest:
@@ -152,7 +151,7 @@ python -B -m scripts.export_final_tte_per_sample \
 
 NH needs three invocations (`nh1`, `nh2`, `nh3`). After the first, explicitly use
 `--overwrite` to allow the remaining files in the shared output directory. These
-commands perform real model evaluation and were NOT executed here. For historical
+commands perform real model evaluation. For historical
 mode omit the fresh manifest and bind `--checkpoint-root` to the original logical
 `final_results` tree. The upstream pretrained hash remains strict in both profiles.
 
@@ -174,5 +173,5 @@ Then `plot_final_next_hop_figures_5_3_5_4` consumes the resulting stratified tab
 `plot_final_tte_figures` consumes TTE statistics/stratification/predictions and also
 creates the duration-bootstrap CSV. Its seed/repetitions/formulas remain unchanged.
 Use a fresh output directory or explicit `--overwrite` for an existing directory.
-No per-sample statistics or figure pipeline was recomputed over the full test set
-in PHASE6; the displayed final figures are byte-identical copies of archived outputs.
+The included figures retain the final thesis output bytes. Coverage and limits of
+the reproduction tests are documented in [verification.md](verification.md).

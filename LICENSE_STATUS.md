@@ -1,17 +1,15 @@
-# Licensing and release readiness
+# Licensing status
 
-The candidate contains the authored thesis implementation and a source-only
-integration tool. No full upstream source, encoded replacement payload, copied
-TTE tokenizer body or legacy processor is distributed. The tool reads a user's
-pinned official checkout and applies transparent AST changes plus independent
-hooks. No authorized private input is needed for the six canonical source chains.
+No license has been selected for the thesis-authored code in this public
+repository. Public availability does not itself grant reuse or redistribution
+rights; contact the repository owner for permission.
 
-Generated adapted files and their backups contain upstream material. Redistribution
-rights for those files are unresolved; keep them local and excluded from publication.
-Attribution, a patch or source transformation is not itself a permission grant.
-The complete old canonical/portable references remain unchanged and private.
+BIGCity is an external dependency. Its pinned source tree has no standalone
+LICENSE/COPYING file, and this repository does not assign a license to it.
+The integration tool adapts a separately obtained checkout on the user's machine.
+Generated runtime files and source backups contain upstream material; their
+redistribution rights remain unresolved, so keep them local.
 
-An author-approved public license for thesis code and final citation metadata are
-still needed. Technical content review is not legal certification. VERIFIED source
-integration is distinct from public-release legal approval and scientific model
-reproduction; neither is declared complete here.
+Data, pretrained weights and other dependencies are subject to their providers'
+terms. Attribution or a source transformation does not grant additional rights.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency attribution.

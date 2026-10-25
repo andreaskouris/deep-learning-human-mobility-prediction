@@ -42,37 +42,35 @@ The semantic branches do not depend on trajectory-cache construction. Qwen cache
 generation is preprocessing, not the prediction backbone. Semantic projections,
 masking, batching and timestamp precision are tested in the locally integrated runtime.
 
-## Single thesis repository and external-source boundary
+## Source dependencies
 
-The candidate contains the actual authored implementation for all six experiments.
-The upstream parents/loaders are derived locally by `setup/integrate_bigcity.py`
-from exactly thirteen pinned official source modules. Eight receive transparent
-AST edits, five remain byte-identical. No private replacement bundle, copied TTE
-tokenizer body or thesis Git history is needed. The legacy original-mode processor
-is outside the canonical controlled profile; the independent TTE hook reuses
-upstream operations with the existing PAD-masked attention callback.
+The task-specific models, runners, preprocessing and analysis are supplied in this
+repository. `setup/integrate_bigcity.py` derives the required upstream modules
+from thirteen pinned official source files: eight adapted and five unchanged.
+The TTE attention adapter reuses upstream tokenization with the task's PAD-masked
+attention callback. The supported profile uses controlled preprocessing and
+`static_ablation=none`.
 
-Public paths/roles are recorded by the [file inventory](../reproducibility/file_selection.json).
-The [dependency chains](../reproducibility/dependency_chains.json) distinguish
-shared preprocessing, task split caches, semantic branches, runner dependencies
-and final export/statistics/figures. Nothing required is excluded merely because
-it uses an upstream API. BGE/ablation/exploratory entry points are excluded.
+The [source inventory](file_selection.md) records component roles and provenance;
+[dependency_chains.json](../reproducibility/dependency_chains.json) maps shared
+preprocessing, task caches, semantic branches, runners, export, statistics and
+figures for each of the six experiments.
 
 ## Verification boundary
 
 Source integration, deterministic bytes, backups, repeated execution and selected
 CPU contracts are VERIFIED. The eight original preimages remain in the output's
-backup directory, and the supplied checkout is unchanged. A no-Git thesis copy
-and independent official checkout are sufficient integration inputs.
+backup directory, and the supplied checkout is unchanged. Integration uses this
+repository and the explicit official checkout.
 
 Six unchanged configurations, 120 required source/cache/time bindings, sixteen
 AST/source comparisons and synthetic model-helper/metric/cache tests were checked.
-The TTE hook is structurally different from the historical copied tokenizer body;
-its outputs/helper gradients match in five small CPU fixtures. Full real-weight/GPU
+The TTE attention adapter matches canonical outputs and helper gradients in five
+small CPU fixtures. Full real-weight/GPU
 numerical equality and fresh model convergence remain NOT TESTED. Source fingerprints
 or import success alone do not establish those properties.
 
-The optional historical source reference is used only for forensic comparison,
+The optional historical source reference is used only for source comparison,
 not assembly or normal reproduction. It may be unavailable publicly; the core
 installation/preprocessing/training/evaluation path has no such dependency.
 
@@ -80,7 +78,8 @@ installation/preprocessing/training/evaluation path has no such dependency.
 
 - Generated upstream-derived runtime/backup redistribution rights remain unresolved;
   keep that output local. The public tool contains no full upstream replacement.
-- An author-approved thesis license and final citation record are still needed.
+- The thesis code has no selected license, and the full thesis citation record is
+  incomplete; see [LICENSE_STATUS.md](../LICENSE_STATUS.md) and [CITATION.md](../CITATION.md).
 - Original XA archive/split-generation provenance and historical TTE Qwen snapshot
   revision are incomplete. Existing source hashes remain unchanged.
 - Structural/NH cache wrappers retain the explicit `../dataset` layout constraint.
@@ -89,4 +88,4 @@ installation/preprocessing/training/evaluation path has no such dependency.
 
 Historical fine-tuned checkpoint integrity remains strict. Fresh runs record their
 own validation-selected checkpoint hashes. [Installation](installation.md) and
-[reproduction](reproduction.md) give the actual conditional commands.
+[reproduction](reproduction.md) give the commands for each step.
