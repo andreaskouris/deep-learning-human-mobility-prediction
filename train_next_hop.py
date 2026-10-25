@@ -22,27 +22,14 @@ METRIC_K = 5
 PRIMARY_METRIC = 'accuracy'
 
 def validation_improved(current_accuracy, best_accuracy):
-    """
-    Return True only when validation Accuracy strictly improves.
-
-    Equal Accuracy does not replace the existing best checkpoint.
-    """
     return current_accuracy > best_accuracy
 
 def early_stopping_reached(epochs_without_improvement, patience):
-    """
-    Return True when the configured early-stopping patience
-    has been exhausted.
-    """
     if patience <= 0:
         raise ValueError('patience must be a positive integer.')
     return epochs_without_improvement >= patience
 
 def load_test_dataset_after_model_selection(test_cache_path, *, best_epoch, checkpoint_reloaded):
-    """
-    Load the test dataset only after validation-based model
-    selection and successful reload of the selected checkpoint.
-    """
     if best_epoch is None:
         raise RuntimeError('Test dataset cannot be loaded before validation-based model selection.')
     if not checkpoint_reloaded:
@@ -50,9 +37,6 @@ def load_test_dataset_after_model_selection(test_cache_path, *, best_epoch, chec
     return CachedNextHopDataset(test_cache_path)
 
 def sha256_file(file_path, chunk_size=1024 * 1024):
-    """
-    Calculate SHA-256 without loading the entire file into memory.
-    """
     digest = hashlib.sha256()
     with open(file_path, 'rb') as file_handle:
         while True:
@@ -63,9 +47,6 @@ def sha256_file(file_path, chunk_size=1024 * 1024):
     return digest.hexdigest().upper()
 
 def resolve_pretrained_checkpoint():
-    """
-    Resolve and validate the pretrained BIGCity checkpoint.
-    """
     if not args.pretrained_checkpoint:
         raise ValueError('--pretrained_checkpoint is required. Example: --pretrained_checkpoint ./checkpoints/xa_pretrain.pth')
     checkpoint_path = os.path.abspath(os.path.expanduser(args.pretrained_checkpoint))
@@ -74,9 +55,6 @@ def resolve_pretrained_checkpoint():
     return checkpoint_path
 
 def resolve_device():
-    """
-    Resolve the single CPU or CUDA device used for the experiment.
-    """
     if args.use_multi_gpu:
         raise ValueError('train_next_hop.py supports one device only.')
     if not args.use_gpu:
@@ -99,33 +77,19 @@ def resolve_device():
     return torch.device(f'cuda:{device_index}')
 
 def build_cache_signature(split):
-    """
-    Build the parameter-aware trajectory-cache signature.
-    """
     sample_rate_tag = global_vars.format_cache_value(args.sample_rate)
     seed_tag = global_vars.format_cache_value(args.seed)
     return f'{split}_seq{args.seq_len}_sr{sample_rate_tag}_seed{seed_tag}_v2'
 
 def get_next_hop_cache_path(split):
-    """
-    Return the explicit next-hop cache path for a data split.
-    """
     signature = build_cache_signature(split)
     return os.path.join(global_vars.city_root_path, f'cached_next_hop_dataset_{signature}.pth')
 
 def get_full_metadata_path():
-    """
-    Return the full-dataset metadata path required by BIGCity.
-    """
     signature = build_cache_signature('full')
     return os.path.join(global_vars.city_root_path, f'cached_meta_{args.city}_{signature}.json')
 
 def load_model_support_data():
-    """
-    Load only the road-level information required by BIGCity.
-
-    Raw trajectory CSV files are intentionally not loaded.
-    """
     file_loader.load_road_relation_file()
     file_loader.load_road_features_file()
     metadata_path = get_full_metadata_path()
@@ -149,23 +113,14 @@ def load_model_support_data():
     return (metadata_path, metadata)
 
 def create_dataloader(dataset, *, shuffle, device, generator=None):
-    """
-    Create a deterministic single-process DataLoader.
-    """
     return DataLoader(dataset, batch_size=args.batch_size, shuffle=shuffle, num_workers=0, pin_memory=device.type == 'cuda', generator=generator)
 
 def move_batch_to_device(batch, device):
-    """
-    Move one next-hop batch to the selected device.
-    """
     road_ids, time_ids, time_features, labels = batch
     non_blocking = device.type == 'cuda'
     return (road_ids.to(device, non_blocking=non_blocking), time_ids.to(device, non_blocking=non_blocking), time_features.to(device, non_blocking=non_blocking), labels.to(device, non_blocking=non_blocking))
 
 def train_one_epoch(model, dataloader, optimizer, scheduler, device, epoch):
-    """
-    Run one complete next-hop training epoch.
-    """
     model.train()
     total_loss = 0.0
     total_samples = 0
@@ -193,9 +148,6 @@ def train_one_epoch(model, dataloader, optimizer, scheduler, device, epoch):
 
 @torch.no_grad()
 def evaluate(model, dataloader, device, split_name):
-    """
-    Evaluate loss and ranking metrics on one split.
-    """
     model.eval()
     metric_accumulator = NextHopMetricAccumulator(k=METRIC_K)
     total_loss = 0.0
@@ -221,26 +173,17 @@ def evaluate(model, dataloader, device, split_name):
     return metrics
 
 def save_checkpoint_atomic(checkpoint_path, payload):
-    """
-    Atomically save the selected best checkpoint.
-    """
     os.makedirs(os.path.dirname(checkpoint_path), exist_ok=True)
     temporary_path = checkpoint_path + '.tmp'
     torch.save(payload, temporary_path)
     os.replace(temporary_path, checkpoint_path)
 
 def load_best_checkpoint(checkpoint_path, model, device):
-    """
-    Reload the validation-selected checkpoint.
-    """
     checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
     model.load_state_dict(checkpoint['model_state_dict'])
     return checkpoint
 
 def save_history_csv(history, output_path):
-    """
-    Save per-epoch training and validation statistics.
-    """
     if not history:
         return
     fieldnames = list(history[0].keys())
@@ -250,17 +193,10 @@ def save_history_csv(history, output_path):
         writer.writerows(history)
 
 def save_json(payload, output_path):
-    """
-    Save a JSON experiment artifact.
-    """
     with open(output_path, 'w', encoding='utf-8') as file_handle:
         json.dump(payload, file_handle, indent=2)
 
 def run_experiment(device, pretrained_checkpoint, log_dir):
-    """
-    Run controlled BIGCity next-hop
-    train/validation/test evaluation.
-    """
     metadata_path, metadata = load_model_support_data()
     train_cache_path = get_next_hop_cache_path('train')
     validation_cache_path = get_next_hop_cache_path('validation')
@@ -352,9 +288,6 @@ def run_experiment(device, pretrained_checkpoint, log_dir):
     return final_results
 
 def main():
-    """
-    Entry point for the controlled next-hop experiment.
-    """
     if args.patience <= 0:
         raise ValueError('--patience must be a positive integer.')
     if args.train_epochs <= 0:
